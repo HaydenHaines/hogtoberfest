@@ -37,7 +37,6 @@
     color: var(--clr-gold-light);
     transform: translateY(-2px);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-    outline: none;
 }
 
 .quick-nav__btn:focus-visible {

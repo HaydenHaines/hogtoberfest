@@ -9,7 +9,7 @@
                class="quick-nav__btn"
                target="_blank"
                rel="noopener noreferrer"
-               aria-label="Register your team — opens external registration page">
+               aria-label="Register your team (opens in a new tab)">
                 <span class="quick-nav__icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <!-- Crosshair / target sight -->
