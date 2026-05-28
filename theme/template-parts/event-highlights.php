@@ -10,7 +10,7 @@
         <div class="cards-grid">
 
             <!-- Card 1: The Hunt -->
-            <article class="card" aria-label="The Hunt">
+            <article class="card">
                 <span class="card__eyebrow">Competition</span>
                 <h3 class="card__title">The Hunt</h3>
                 <p class="card__body">
@@ -25,7 +25,7 @@
             </article>
 
             <!-- Card 2: The Festival -->
-            <article class="card" aria-label="The Festival">
+            <article class="card">
                 <span class="card__eyebrow">Community Event</span>
                 <h3 class="card__title">The Festival</h3>
                 <p class="card__body">
@@ -40,7 +40,7 @@
             </article>
 
             <!-- Card 3: The Cause -->
-            <article class="card" aria-label="The Cause">
+            <article class="card">
                 <span class="card__eyebrow">Give Back</span>
                 <h3 class="card__title">The Cause</h3>
                 <p class="card__body">
