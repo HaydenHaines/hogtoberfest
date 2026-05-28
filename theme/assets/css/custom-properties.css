@@ -1,0 +1,70 @@
+:root {
+    /* ── Colors (derived from logo palette) ──────────────── */
+    --clr-green-dark:   #1a3320;
+    --clr-green-mid:    #2a5232;
+    --clr-green-light:  #3d6b44;
+    --clr-gold:         #c8972b;
+    --clr-gold-light:   #e8b84b;
+    --clr-gold-dark:    #9a7020;
+    --clr-brown-dark:   #1e1208;
+    --clr-brown-mid:    #3d2210;
+    --clr-brown-light:  #6b3c1e;
+    --clr-cream:        #f5edd0;
+    --clr-cream-dark:   #e0d0a8;
+    --clr-off-white:    #faf7ee;
+    --clr-text-dark:    #1a1008;
+    --clr-text-muted:   #5c4a30;
+
+    /* ── Typography ──────────────────────────────────────── */
+    --font-display:  'Cinzel Decorative', serif;
+    --font-heading:  'Cinzel', serif;
+    --font-body:     'Source Serif 4', Georgia, serif;
+    --font-ui:       'Inter', system-ui, sans-serif;
+
+    /* ── Type Scale (fluid-ish) ──────────────────────────── */
+    --text-xs:   0.75rem;
+    --text-sm:   0.875rem;
+    --text-base: 1rem;
+    --text-lg:   1.125rem;
+    --text-xl:   1.25rem;
+    --text-2xl:  1.5rem;
+    --text-3xl:  1.875rem;
+    --text-4xl:  2.25rem;
+    --text-5xl:  3rem;
+    --text-6xl:  3.75rem;
+
+    /* ── Spacing ─────────────────────────────────────────── */
+    --sp-1:  0.25rem;
+    --sp-2:  0.5rem;
+    --sp-3:  0.75rem;
+    --sp-4:  1rem;
+    --sp-6:  1.5rem;
+    --sp-8:  2rem;
+    --sp-12: 3rem;
+    --sp-16: 4rem;
+    --sp-24: 6rem;
+
+    /* ── Layout ──────────────────────────────────────────── */
+    --max-width:    1200px;
+    --nav-height:   72px;
+    --section-pad:  var(--sp-16);
+    --inner-pad:    var(--sp-8);
+
+    /* ── Borders & Radius ────────────────────────────────── */
+    --radius-sm:    4px;
+    --radius-md:    8px;
+    --radius-lg:    16px;
+    --border-gold:  2px solid var(--clr-gold);
+    --border-green: 1px solid var(--clr-green-light);
+
+    /* ── Shadows ─────────────────────────────────────────── */
+    --shadow-sm:  0 2px 8px rgba(0,0,0,0.25);
+    --shadow-md:  0 4px 20px rgba(0,0,0,0.35);
+    --shadow-lg:  0 8px 40px rgba(0,0,0,0.5);
+    --glow-gold:  0 0 20px rgba(200,151,43,0.3);
+
+    /* ── Transitions ─────────────────────────────────────── */
+    --ease-fast:  150ms ease;
+    --ease-base:  250ms ease;
+    --ease-slow:  400ms ease;
+}
