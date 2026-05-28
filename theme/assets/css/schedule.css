@@ -1,0 +1,190 @@
+/* ── Schedule Section ───────────────────────────────────── */
+.schedule-section {
+    background-color: var(--clr-off-white);
+}
+
+/* ── Two-Column Grid ────────────────────────────────────── */
+.schedule-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--sp-8);
+    align-items: start;
+    margin-bottom: var(--sp-12);
+}
+
+@media (min-width: 769px) {
+    .schedule-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--sp-12);
+    }
+}
+
+/* ── Day Column ─────────────────────────────────────────── */
+.schedule-day__heading {
+    font-family: var(--font-display);
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    color: var(--clr-green-dark);
+    text-align: center;
+    margin: 0 0 var(--sp-4) 0;
+    letter-spacing: 0.03em;
+}
+
+/* ── Schedule List ──────────────────────────────────────── */
+.schedule-list {
+    margin: var(--sp-6) 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* ── Individual Schedule Item ───────────────────────────── */
+.schedule-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    column-gap: var(--sp-4);
+    padding: var(--sp-4) var(--sp-4);
+    border-left: 4px solid var(--clr-cream-dark);
+    margin-bottom: var(--sp-3);
+    background-color: #fff;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    box-shadow: 0 1px 3px color-mix(in srgb, var(--clr-green-dark) 6%, transparent);
+    transition: border-color var(--ease-fast), box-shadow var(--ease-fast);
+}
+
+.schedule-item:hover {
+    border-color: var(--clr-gold);
+    box-shadow: var(--shadow-md);
+}
+
+@media (min-width: 481px) {
+    .schedule-item {
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+    }
+}
+
+/* Key event — hunt start/end */
+.schedule-item--key {
+    border-left-color: var(--clr-gold);
+}
+
+/* Deadline — warning emphasis */
+.schedule-item--deadline {
+    border-left-color: #b45309;
+}
+
+/* Highlight — awards ceremony */
+.schedule-item--highlight {
+    border-left-color: var(--clr-gold);
+    background-color: var(--clr-green-dark);
+}
+
+.schedule-item--highlight .schedule-item__time {
+    color: var(--clr-gold-light);
+}
+
+.schedule-item--highlight .schedule-item__label {
+    color: var(--clr-cream);
+}
+
+.schedule-item--highlight .schedule-item__note {
+    color: var(--clr-cream-dark);
+}
+
+/* ── Time (large gold) ──────────────────────────────────── */
+.schedule-item__time {
+    grid-column: 1;
+    grid-row: 1;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--clr-gold);
+    line-height: 1;
+    white-space: nowrap;
+    align-self: start;
+    margin: 0 0 var(--sp-2) 0;
+    padding-top: 0.05em;
+}
+
+@media (min-width: 481px) {
+    .schedule-item__time {
+        font-size: 1.375rem;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .schedule-item__time {
+        font-size: clamp(1.5rem, 3vw, 2.25rem);
+    }
+}
+
+/* ── Event Label ────────────────────────────────────────── */
+.schedule-item__label {
+    grid-column: 1;
+    grid-row: 2;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--clr-green-dark);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 0;
+    align-self: end;
+}
+
+@media (min-width: 481px) {
+    .schedule-item__label {
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
+
+/* ── Short Note below the label ─────────────────────────── */
+.schedule-item__note {
+    grid-column: 1;
+    grid-row: 3;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    color: #666;
+    line-height: 1.5;
+    margin: var(--sp-2) 0 0 0;
+}
+
+@media (min-width: 481px) {
+    .schedule-item__note {
+        grid-column: 2;
+        grid-row: 2;
+    }
+}
+
+/* ── Callout Box ────────────────────────────────────────── */
+.schedule-callout {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--sp-4);
+    background-color: var(--clr-green-dark);
+    border: var(--border-gold);
+    border-radius: var(--radius-md);
+    padding: var(--sp-6);
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.schedule-callout__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--clr-gold);
+    flex-shrink: 0;
+    margin-top: 0.1em;
+}
+
+.schedule-callout p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--clr-cream);
+    line-height: 1.6;
+    margin: 0;
+    font-style: italic;
+}
