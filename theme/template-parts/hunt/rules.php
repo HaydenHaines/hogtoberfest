@@ -13,7 +13,7 @@
 		<div class="gold-rule" aria-hidden="true"></div>
 		<p class="section-subtitle">All teams must review and agree to these rules at the mandatory pre-hunt meeting.</p>
 
-		<ol class="hunt-rules__list" aria-label="Hunt rules">
+		<ol class="hunt-rules__list">
 
 			<li class="hunt-rules__item">
 				<p class="hunt-rules__text">Teams of 2 to 4 hunters. Team composition is locked at registration.</p>

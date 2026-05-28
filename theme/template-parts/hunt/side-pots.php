@@ -7,6 +7,8 @@
  *
  * @package Hogtoberfest
  */
+
+$side_pot_fee = hogtoberfest_side_pot_fee();
 ?>
 <section class="section section--brown hunt-side-pots" aria-labelledby="side-pots-heading">
 	<div class="container">
@@ -22,7 +24,7 @@
 				<h3 class="side-pot-card__title">Heaviest Overall Hog</h3>
 				<div class="side-pot-card__fee-badge">
 					<span class="side-pot-card__fee-label">Entry Fee</span>
-					<span class="side-pot-card__fee-amount"><?php echo esc_html( hogtoberfest_side_pot_fee() ); ?></span>
+					<span class="side-pot-card__fee-amount"><?php echo esc_html( $side_pot_fee ); ?></span>
 				</div>
 				<p class="side-pot-card__payout">100% Winner Take All</p>
 				<p class="side-pot-card__note">Across both divisions. Heaviest single hog of the entire event.</p>
@@ -34,7 +36,7 @@
 				<h3 class="side-pot-card__title">Ugliest Hog</h3>
 				<div class="side-pot-card__fee-badge">
 					<span class="side-pot-card__fee-label">Entry Fee</span>
-					<span class="side-pot-card__fee-amount"><?php echo esc_html( hogtoberfest_side_pot_fee() ); ?></span>
+					<span class="side-pot-card__fee-amount"><?php echo esc_html( $side_pot_fee ); ?></span>
 				</div>
 				<p class="side-pot-card__payout">100% Winner Take All</p>
 				<p class="side-pot-card__note">Judged by panel at weigh-in. Most notable physical characteristics wins.</p>
@@ -46,7 +48,7 @@
 				<h3 class="side-pot-card__title">Biggest Head</h3>
 				<div class="side-pot-card__fee-badge">
 					<span class="side-pot-card__fee-label">Entry Fee</span>
-					<span class="side-pot-card__fee-amount"><?php echo esc_html( hogtoberfest_side_pot_fee() ); ?></span>
+					<span class="side-pot-card__fee-amount"><?php echo esc_html( $side_pot_fee ); ?></span>
 				</div>
 				<p class="side-pot-card__payout">100% Winner Take All</p>
 				<p class="side-pot-card__note">Measured at weigh-in station. Widest skull measurement wins.</p>
