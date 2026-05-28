@@ -22,3 +22,20 @@ function hogtoberfest_side_pot_fee(): string {
     $fee = (int) get_field( 'side_pot_fee', 'option' ) ?: 40;
     return '$' . $fee;
 }
+
+add_action( 'wp_footer', function (): void {
+    ?>
+    <script>
+    (function () {
+        const toggle = document.querySelector('.nav-toggle');
+        const nav    = document.querySelector('.primary-nav');
+        if (!toggle || !nav) return;
+        toggle.addEventListener('click', function () {
+            const open = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', String(!open));
+            nav.classList.toggle('is-open', !open);
+        });
+    }());
+    </script>
+    <?php
+} );
