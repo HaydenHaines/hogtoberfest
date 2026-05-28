@@ -6,6 +6,8 @@
 
     <?php get_template_part( 'template-parts/quick-nav' ); ?>
 
+    <?php get_template_part( 'template-parts/event-highlights' ); ?>
+
 </main>
 
 <?php get_footer(); ?>
