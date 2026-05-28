@@ -137,3 +137,84 @@
         gap: var(--sp-8);
     }
 }
+
+/* ── Prize Spotlight section chrome ───────────────────── */
+.prize-spotlight {
+    position: relative;
+    overflow: hidden;
+}
+
+/* ── Mascot ────────────────────────────────────────────── */
+.prize-spotlight__mascot-wrap {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.prize-spotlight__mascot {
+    width: 320px;
+    height: auto;
+    filter: grayscale(100%);
+}
+
+/* Ensure content sits above the mascot watermark */
+.prize-spotlight .container > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ── Main Pot block ────────────────────────────────────── */
+.prize-spotlight__main-pot {
+    background-color: rgba(200, 151, 43, 0.12);
+    border: 1px solid rgba(200, 151, 43, 0.3);
+    border-radius: var(--radius-md);
+    padding: var(--sp-8);
+    margin-bottom: var(--sp-12);
+}
+
+.prize-spotlight__main-pot-heading {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    color: var(--clr-gold-light);
+    margin-bottom: var(--sp-4);
+}
+
+.prize-spotlight__main-pot-body {
+    font-family: var(--font-body);
+    font-size: var(--text-lg);
+    color: var(--clr-cream);
+    line-height: 1.75;
+}
+
+.prize-spotlight__main-pot-body strong {
+    color: var(--clr-gold);
+    display: block;
+    margin-top: var(--sp-3);
+}
+
+/* ── Side Pot subheadings ──────────────────────────────── */
+.prize-spotlight__side-heading {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    color: var(--clr-gold);
+    margin-bottom: var(--sp-2);
+    text-align: center;
+}
+
+.prize-spotlight__side-subhead {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--clr-cream-dark);
+    text-align: center;
+    margin-bottom: var(--sp-8);
+}
+
+@media (max-width: 768px) {
+    .prize-spotlight__mascot-wrap {
+        display: none;
+    }
+}

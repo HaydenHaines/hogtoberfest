@@ -8,6 +8,8 @@
 
     <?php get_template_part( 'template-parts/event-highlights' ); ?>
 
+    <?php get_template_part( 'template-parts/prize-spotlight' ); ?>
+
 </main>
 
 <?php get_footer(); ?>
