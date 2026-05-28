@@ -2,8 +2,6 @@
 /**
  * Template Part: Hunt Rules
  *
- * Displays the official hunt rules list including the polygraph policy callout.
- *
  * @package Hogtoberfest
  */
 ?>
@@ -16,39 +14,23 @@
 		<ol class="hunt-rules__list">
 
 			<li class="hunt-rules__item">
-				<p class="hunt-rules__text">Teams of 2 to 4 hunters. Team composition is locked at registration.</p>
-			</li>
-
-			<li class="hunt-rules__item">
 				<p class="hunt-rules__text">All hogs must be killed within the official 24-hour hunt window — 2:00 PM Friday to 2:00 PM Saturday.</p>
 			</li>
 
 			<li class="hunt-rules__item">
-				<p class="hunt-rules__text">Only hogs killed on participating private lands within the designated hunt boundaries are eligible.</p>
+				<p class="hunt-rules__text">No trapped, penned, or previously killed animals.</p>
 			</li>
 
 			<li class="hunt-rules__item">
-				<p class="hunt-rules__text">All hogs must be brought to the official weigh-in station located across from the Stroud Fire Station.</p>
+				<p class="hunt-rules__text">No pooling between teams.</p>
 			</li>
 
 			<li class="hunt-rules__item">
-				<p class="hunt-rules__text">Check-in deadline is 3:00 PM Saturday. Late arrivals forfeit all prize eligibility.</p>
+				<p class="hunt-rules__text">No aircraft or illegal methods.</p>
 			</li>
 
 			<li class="hunt-rules__item">
-				<p class="hunt-rules__text">Hunters must present valid Oklahoma hunting licenses at weigh-in.</p>
-			</li>
-
-			<li class="hunt-rules__item">
-				<p class="hunt-rules__text">Each team may submit one hog per division entered.</p>
-			</li>
-
-			<li class="hunt-rules__item">
-				<p class="hunt-rules__text">No electronic calls or bait are permitted.</p>
-			</li>
-
-			<li class="hunt-rules__item">
-				<p class="hunt-rules__text">In the event of a tie, the team that checked in first wins.</p>
+				<p class="hunt-rules__text">Entire team must weigh in together. All team members must be present and in line for check-in by 3:00 PM Saturday.</p>
 			</li>
 
 			<li class="hunt-rules__item hunt-rules__item--polygraph">

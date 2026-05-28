@@ -2,9 +2,6 @@
 /**
  * Template Part: Hunt Side Pots
  *
- * Displays optional side pot add-ons available at registration,
- * including Heaviest Overall Hog, Ugliest Hog, and Biggest Head.
- *
  * @package Hogtoberfest
  */
 
@@ -14,44 +11,47 @@ $side_pot_fee = hogtoberfest_side_pot_fee();
 	<div class="container">
 		<h2 class="section-title" id="side-pots-heading">Side Pot Options</h2>
 		<div class="gold-rule" aria-hidden="true"></div>
-		<p class="section-subtitle">Optional add-ons at registration. Each side pot has its own prize pool — 100% paid out to winners.</p>
+		<p class="section-subtitle">Optional add-ons at registration. Each side pot pays out 100% to the winner.</p>
 
 		<div class="side-pots__grid">
 
-			<!-- Heaviest Overall Hog -->
+			<!-- Largest Hog -->
 			<div class="side-pot-card">
 				<div class="side-pot-card__icon" aria-hidden="true">🏆</div>
-				<h3 class="side-pot-card__title">Heaviest Overall Hog</h3>
+				<h3 class="side-pot-card__title">Largest Hog</h3>
 				<div class="side-pot-card__fee-badge">
 					<span class="side-pot-card__fee-label">Entry Fee</span>
 					<span class="side-pot-card__fee-amount"><?php echo esc_html( $side_pot_fee ); ?></span>
 				</div>
 				<p class="side-pot-card__payout">100% Winner Take All</p>
-				<p class="side-pot-card__note">Across both divisions. Heaviest single hog of the entire event.</p>
+				<p class="side-pot-card__note">Heaviest single hog harvested during the 24-hour hunt window. Weigh-in at the festival Saturday evening.</p>
+				<p class="side-pot-card__note">100% Payout to Winner. Sponsored match contributes to fundraiser.</p>
 			</div>
 
-			<!-- Ugliest Hog -->
+			<!-- Most Hogs -->
 			<div class="side-pot-card">
-				<div class="side-pot-card__icon" aria-hidden="true">😤</div>
-				<h3 class="side-pot-card__title">Ugliest Hog</h3>
+				<div class="side-pot-card__icon" aria-hidden="true">🐗</div>
+				<h3 class="side-pot-card__title">Most Hogs</h3>
 				<div class="side-pot-card__fee-badge">
 					<span class="side-pot-card__fee-label">Entry Fee</span>
 					<span class="side-pot-card__fee-amount"><?php echo esc_html( $side_pot_fee ); ?></span>
 				</div>
 				<p class="side-pot-card__payout">100% Winner Take All</p>
-				<p class="side-pot-card__note">Judged by panel at weigh-in. Most notable physical characteristics wins.</p>
+				<p class="side-pot-card__note">Highest combined hog count by a single team across the full 24-hour competition period. All harvested hogs must be presented at weigh-in.</p>
+				<p class="side-pot-card__note">100% Payout to Winner. Sponsored match contributes to fundraiser.</p>
 			</div>
 
-			<!-- Biggest Head -->
+			<!-- Longest Cutter -->
 			<div class="side-pot-card">
-				<div class="side-pot-card__icon" aria-hidden="true">💀</div>
-				<h3 class="side-pot-card__title">Biggest Head</h3>
+				<div class="side-pot-card__icon" aria-hidden="true">🦷</div>
+				<h3 class="side-pot-card__title">Longest Cutter</h3>
 				<div class="side-pot-card__fee-badge">
 					<span class="side-pot-card__fee-label">Entry Fee</span>
 					<span class="side-pot-card__fee-amount"><?php echo esc_html( $side_pot_fee ); ?></span>
 				</div>
 				<p class="side-pot-card__payout">100% Winner Take All</p>
-				<p class="side-pot-card__note">Measured at weigh-in station. Widest skull measurement wins.</p>
+				<p class="side-pot-card__note">Longest single cutter (tusk) harvested and presented at weigh-in. Measured tip-to-base by event officials. No substitutions after weigh-in.</p>
+				<p class="side-pot-card__note">100% Payout to Winner. Sponsored match contributes to fundraiser.</p>
 			</div>
 
 		</div>
