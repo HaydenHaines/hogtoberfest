@@ -369,3 +369,10 @@ a:hover { color: var(--clr-gold); }
         max-height: 64px;
     }
 }
+
+/* ── Homepage layout overrides ─────────────────────────── */
+.site-content:has(.site-main--home) {
+    padding-top: 0;
+}
+
+.site-main--home { }
