@@ -49,8 +49,9 @@
             numSeconds.textContent = pad(seconds);
         }
 
+        var timer;
         tick();
-        var timer = setInterval(tick, 1000);
+        timer = setInterval(tick, 1000);
     }
 
     if (document.readyState === 'loading') {

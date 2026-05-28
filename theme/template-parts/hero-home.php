@@ -31,7 +31,7 @@ $theme_uri   = get_template_directory_uri();
             </span>
         </div>
 
-        <div class="hero__countdown" aria-label="Countdown to hunt start" aria-live="polite">
+        <div class="hero__countdown" aria-label="Countdown to hunt start">
             <div class="countdown__unit">
                 <span class="countdown__number" id="countdown-days">--</span>
                 <span class="countdown__label">Days</span>
@@ -58,7 +58,7 @@ $theme_uri   = get_template_directory_uri();
                 <span class="countdown__label">Seconds</span>
             </div>
 
-            <span class="countdown__launched-msg" aria-label="The Hunt Has Begun!">
+            <span class="countdown__launched-msg" aria-label="The Hunt Has Begun!" aria-live="polite">
                 The Hunt Has Begun!
             </span>
         </div>
