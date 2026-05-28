@@ -10,6 +10,8 @@
 
     <?php get_template_part( 'template-parts/prize-spotlight' ); ?>
 
+    <?php get_template_part( 'template-parts/sponsor-bar' ); ?>
+
 </main>
 
 <?php get_footer(); ?>
