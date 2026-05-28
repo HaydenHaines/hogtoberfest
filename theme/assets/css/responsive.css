@@ -36,7 +36,7 @@
   }
 
   /* --- Prize spotlight --------------------------------------- */
-  .side-pots-grid {
+  .side-pots__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -112,7 +112,7 @@
   }
 
   .countdown__unit {
-    min-width: 56px;
+    min-width: 56px; /* no matching token — specific to countdown unit sizing */
     padding: var(--sp-2, 0.5rem) var(--sp-4, 1rem);
   }
 
@@ -126,30 +126,24 @@
     padding: var(--sp-4, 1rem) var(--sp-2, 0.5rem);
   }
 
-  /* --- Event highlights -------------------------------------- */
-  .highlights-grid {
+  /* --- Event highlights / card grids ------------------------- */
+  .cards-grid {
     grid-template-columns: 1fr;
   }
 
-  .highlight-card {
+  .card {
     max-width: 540px;
     margin-inline: auto;
     width: 100%;
   }
 
   /* --- Prize spotlight --------------------------------------- */
-  .side-pots-grid {
+  .side-pots__grid {
     grid-template-columns: 1fr;
   }
 
-  .prize-card {
-    max-width: 480px;
-    margin-inline: auto;
-    width: 100%;
-  }
-
   /* --- Hunt page: entry fees --------------------------------- */
-  .entry-fees-grid {
+  .entry-fees__grid {
     grid-template-columns: 1fr;
   }
 
@@ -166,11 +160,6 @@
 
   .main-pot__table-wrap table {
     min-width: 480px;
-  }
-
-  /* --- Attend page: attractions grid ------------------------- */
-  .attractions-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   /* --- Sponsors logo grid ------------------------------------ */
@@ -255,7 +244,7 @@
   }
 
   .countdown__label {
-    font-size: 0.625rem;
+    font-size: 0.625rem; /* sub-xs — no token; smaller than --text-xs (0.75rem) */
     letter-spacing: 0.08em;
   }
 
@@ -268,34 +257,25 @@
 
   .quick-nav__btn {
     padding: var(--sp-2, 0.5rem) var(--sp-2, 0.5rem);
-    font-size: 0.75rem;
+    font-size: var(--text-xs, 0.75rem);
     gap: var(--sp-2, 0.5rem);
   }
 
   .quick-nav__icon {
-    font-size: 1.25rem;
+    font-size: var(--text-xl, 1.25rem);
     line-height: 1;
   }
 
   .quick-nav__label {
-    font-size: 0.6875rem;
+    font-size: 0.6875rem; /* sub-xs — no token; between --text-xs and smaller */
     line-height: 1.2;
   }
 
-  /* --- Event highlights ------------------------------------- */
-  .highlight-card {
+  /* --- Card grids (event highlights, prize spotlight, attend) */
+  .card {
     padding: var(--sp-6, 1.5rem);
-  }
-
-  /* --- Prize spotlight -------------------------------------- */
-  .prize-card {
     width: 100%;
     max-width: 100%;
-  }
-
-  /* --- Attend page: attractions grid ------------------------ */
-  .attractions-grid {
-    grid-template-columns: 1fr;
   }
 
   /* --- Sponsors logo grid ----------------------------------- */
