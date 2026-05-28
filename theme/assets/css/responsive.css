@@ -1,0 +1,317 @@
+/* =============================================================
+   Hogtoberfest — Responsive Stylesheet
+   Breakpoints:
+     1024px  tablet landscape
+      768px  tablet portrait / large mobile
+      480px  mobile
+   All class names match components established in Phases 1–5.
+   This file is a polish layer — it applies corrections and
+   layout collapses on top of the existing component CSS.
+   ============================================================= */
+
+/* -------------------------------------------------------------
+   1024px — TABLET LANDSCAPE
+   ------------------------------------------------------------- */
+@media (max-width: 1024px) {
+
+  /* --- Hero -------------------------------------------------- */
+  .hero__title {
+    font-size: var(--text-5xl, 3rem);
+  }
+
+  .hero__tagline {
+    font-size: var(--text-xl, 1.25rem);
+  }
+
+  .hero__dates {
+    font-size: var(--text-lg, 1.125rem);
+  }
+
+  .countdown__number {
+    font-size: var(--text-4xl, 2.25rem);
+  }
+
+  .countdown__label {
+    font-size: var(--text-xs, 0.75rem);
+  }
+
+  /* --- Prize spotlight --------------------------------------- */
+  .side-pots-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* --- General typography ------------------------------------ */
+  h1 {
+    font-size: var(--text-4xl, 2.25rem);
+  }
+
+  h2 {
+    font-size: var(--text-3xl, 1.875rem);
+  }
+
+  h3 {
+    font-size: var(--text-2xl, 1.5rem);
+  }
+
+}
+
+/* -------------------------------------------------------------
+   768px — TABLET PORTRAIT / LARGE MOBILE
+   ------------------------------------------------------------- */
+@media (max-width: 768px) {
+
+  /* --- Section padding override ------------------------------ */
+  :root {
+    --section-pad: 3rem;
+  }
+
+  /* --- General typography ------------------------------------ */
+  h1 {
+    font-size: var(--text-3xl, 1.875rem);
+  }
+
+  h2 {
+    font-size: var(--text-2xl, 1.5rem);
+  }
+
+  h3 {
+    font-size: var(--text-xl, 1.25rem);
+  }
+
+  .page-header__title {
+    font-size: var(--text-4xl, 2.25rem);
+  }
+
+  /* --- Hero -------------------------------------------------- */
+  .hero {
+    min-height: 90vh;
+  }
+
+  .hero__logo {
+    max-width: 280px;
+  }
+
+  .hero__title {
+    font-size: var(--text-4xl, 2.25rem);
+  }
+
+  .hero__tagline {
+    font-size: var(--text-lg, 1.125rem);
+  }
+
+  .hero__dates {
+    font-size: var(--text-base, 1rem);
+  }
+
+  .countdown {
+    gap: var(--sp-4, 1rem);
+  }
+
+  .countdown__number {
+    font-size: var(--text-3xl, 1.875rem);
+  }
+
+  .countdown__unit {
+    min-width: 56px;
+    padding: var(--sp-2, 0.5rem) var(--sp-4, 1rem);
+  }
+
+  /* --- Quick-nav bar ----------------------------------------- */
+  .quick-nav__grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .quick-nav__btn {
+    padding: var(--sp-4, 1rem) var(--sp-2, 0.5rem);
+  }
+
+  /* --- Event highlights -------------------------------------- */
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .highlight-card {
+    max-width: 540px;
+    margin-inline: auto;
+    width: 100%;
+  }
+
+  /* --- Prize spotlight --------------------------------------- */
+  .side-pots-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prize-card {
+    max-width: 480px;
+    margin-inline: auto;
+    width: 100%;
+  }
+
+  /* --- Hunt page: entry fees --------------------------------- */
+  .entry-fees-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* --- Hunt page: divisions ---------------------------------- */
+  .hunt-divisions__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* --- Hunt page: main pot table — make scrollable ----------- */
+  .main-pot__table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .main-pot__table-wrap table {
+    min-width: 480px;
+  }
+
+  /* --- Attend page: attractions grid ------------------------- */
+  .attractions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* --- Sponsors logo grid ------------------------------------ */
+  .sponsors-logo-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  /* --- Map embed -------------------------------------------- */
+  .map-embed__container iframe {
+    height: 280px;
+  }
+
+  /* --- Register CTA block ------------------------------------ */
+  .register-cta-block__inner {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sp-6, 1.5rem);
+  }
+
+  .register-cta-block__heading {
+    font-size: var(--text-2xl, 1.5rem);
+  }
+
+  .register-cta-block .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* --- Footer ----------------------------------------------- */
+  .footer__grid {
+    gap: var(--sp-8, 2rem);
+  }
+
+}
+
+/* -------------------------------------------------------------
+   480px — MOBILE
+   ------------------------------------------------------------- */
+@media (max-width: 480px) {
+
+  /* --- Section padding override ------------------------------ */
+  :root {
+    --section-pad: 2rem;
+  }
+
+  /* --- General typography ------------------------------------ */
+  h1 {
+    font-size: var(--text-2xl, 1.5rem);
+  }
+
+  .page-header__title {
+    font-size: var(--text-3xl, 1.875rem);
+  }
+
+  /* --- Hero -------------------------------------------------- */
+  .hero__tagline {
+    font-size: var(--text-2xl, 1.5rem);
+  }
+
+  .hero__cta .btn {
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+
+  /* Countdown: 2×2 grid */
+  .countdown {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: var(--sp-4, 1rem);
+    justify-items: center;
+  }
+
+  .countdown__unit {
+    width: 100%;
+    padding: var(--sp-4, 1rem) var(--sp-2, 0.5rem);
+  }
+
+  .countdown__number {
+    font-size: var(--text-2xl, 1.5rem);
+  }
+
+  .countdown__label {
+    font-size: 0.625rem;
+    letter-spacing: 0.08em;
+  }
+
+  /* --- Quick-nav bar ----------------------------------------- */
+  .quick-nav__grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: var(--sp-2, 0.5rem);
+  }
+
+  .quick-nav__btn {
+    padding: var(--sp-2, 0.5rem) var(--sp-2, 0.5rem);
+    font-size: 0.75rem;
+    gap: var(--sp-2, 0.5rem);
+  }
+
+  .quick-nav__icon {
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+
+  .quick-nav__label {
+    font-size: 0.6875rem;
+    line-height: 1.2;
+  }
+
+  /* --- Event highlights ------------------------------------- */
+  .highlight-card {
+    padding: var(--sp-6, 1.5rem);
+  }
+
+  /* --- Prize spotlight -------------------------------------- */
+  .prize-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* --- Attend page: attractions grid ------------------------ */
+  .attractions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* --- Sponsors logo grid ----------------------------------- */
+  .sponsors-logo-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  /* --- Map embed -------------------------------------------- */
+  .map-embed__container iframe {
+    height: 220px;
+  }
+
+  /* --- Register CTA block ----------------------------------- */
+  .register-cta-block__heading {
+    font-size: var(--text-xl, 1.25rem);
+  }
+
+}
