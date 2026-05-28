@@ -5,9 +5,7 @@
  * Two-column layout: contact details left, Contact Form 7 right.
  * Map embed below both columns.
  *
- * Setup required: Install "Contact Form 7" plugin (free, wordpress.org),
- * create a form with fields Name / Email / Phone (optional) / Subject / Message,
- * then replace FORM_ID in the do_shortcode call below with the assigned form ID.
+ * Contact Form 7 (v5.9.8) installed; form ID 26 ("Hogtoberfest Contact").
  */
 
 get_header();
@@ -262,9 +260,7 @@ get_header();
                 <h2 class="contact-form-wrap__heading">Send a Message</h2>
                 <div class="gold-rule" aria-hidden="true"></div>
                 <?php
-                // Replace FORM_ID with the ID assigned when Contact Form 7 is configured in WP Admin.
-                // To find the ID: WP Admin → Contact → All Forms → hover the form title → note the post= value in the URL.
-                echo do_shortcode( '[contact-form-7 id="FORM_ID" title="Contact Form"]' );
+                echo do_shortcode( '[contact-form-7 id="26" title="Hogtoberfest Contact"]' );
                 ?>
             </div>
 

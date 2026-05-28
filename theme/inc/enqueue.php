@@ -20,7 +20,6 @@ function hogtoberfest_scripts(): void {
         'hog-quick-nav' => [ 'quick-nav.css',         ['hog-base'] ],
         'hog-cards'     => [ 'cards.css',             ['hog-base'] ],
         'hog-hunt'      => [ 'hunt.css',              ['hog-base', 'hog-cards'] ],
-        'hog-attend'    => [ 'attend.css',            ['hog-base', 'hog-cards'] ],
         'hog-schedule'  => [ 'schedule.css',          ['hog-base'] ],
         'hog-sponsors'  => [ 'sponsors.css',          ['hog-base'] ],
         'hog-responsive'=> [ 'responsive.css',        ['hog-base'] ],
