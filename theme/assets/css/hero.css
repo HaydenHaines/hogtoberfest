@@ -1,0 +1,237 @@
+/* ── Hero Section ──────────────────────────────────────── */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+
+    background-color: var(--clr-green-dark);
+    background-image:
+        radial-gradient(
+            ellipse at 20% 30%,
+            rgba(61, 107, 68, 0.35) 0%,
+            transparent 55%
+        ),
+        radial-gradient(
+            ellipse at 80% 70%,
+            rgba(61, 34, 16, 0.6) 0%,
+            transparent 55%
+        ),
+        linear-gradient(
+            160deg,
+            var(--clr-green-dark) 0%,
+            #1e2a14 35%,
+            #221508 65%,
+            var(--clr-brown-dark) 100%
+        );
+}
+
+/* Subtle noise/grain overlay for texture */
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Gold border rule at bottom edge */
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--clr-gold) 20%,
+        var(--clr-gold-light) 50%,
+        var(--clr-gold) 80%,
+        transparent 100%
+    );
+    z-index: 1;
+}
+
+/* ── Hero Inner Content ─────────────────────────────────── */
+.hero__inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sp-8);
+    padding-top: calc(var(--nav-height) / 2);
+    padding-inline: var(--sp-8);
+    max-width: 860px;
+    width: 100%;
+}
+
+/* ── Primary Logo ──────────────────────────────────────── */
+.hero__logo {
+    width: min(480px, 80vw);
+    height: auto;
+    filter: drop-shadow(0 4px 24px rgba(0, 0, 0, 0.6));
+}
+
+/* ── Tagline ───────────────────────────────────────────── */
+.hero__tagline {
+    font-family: var(--font-heading);
+    font-size: clamp(var(--text-lg), 3vw, var(--text-3xl));
+    font-weight: 600;
+    color: var(--clr-cream);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Gold dot separators between tagline words */
+.hero__tagline-dot {
+    color: var(--clr-gold);
+    margin-inline: 0.4em;
+}
+
+/* ── Date + Location ───────────────────────────────────── */
+.hero__event-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sp-2);
+}
+
+.hero__date {
+    font-family: var(--font-ui);
+    font-size: clamp(var(--text-base), 2vw, var(--text-xl));
+    font-weight: 600;
+    color: var(--clr-gold-light);
+    letter-spacing: 0.08em;
+}
+
+.hero__location {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--clr-cream-dark);
+    font-style: italic;
+    letter-spacing: 0.04em;
+}
+
+/* ── Countdown Timer ───────────────────────────────────── */
+.hero__countdown {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--sp-4);
+}
+
+.countdown__unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sp-2);
+    min-width: 72px;
+}
+
+.countdown__number {
+    display: block;
+    font-family: var(--font-display);
+    font-size: clamp(var(--text-3xl), 6vw, var(--text-5xl));
+    font-weight: 700;
+    color: var(--clr-gold);
+    line-height: 1;
+    text-shadow: 0 2px 12px rgba(200, 151, 43, 0.5);
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(200, 151, 43, 0.25);
+    border-radius: var(--radius-md);
+    padding: var(--sp-4) var(--sp-6);
+    min-width: 80px;
+    text-align: center;
+}
+
+.countdown__label {
+    font-family: var(--font-ui);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--clr-cream-dark);
+}
+
+.countdown__separator {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    color: var(--clr-gold);
+    opacity: 0.5;
+    line-height: 1;
+    margin-top: var(--sp-4);
+}
+
+/* Launched state */
+.hero__countdown--launched .countdown__unit {
+    display: none;
+}
+
+.hero__countdown--launched .countdown__separator {
+    display: none;
+}
+
+.countdown__launched-msg {
+    display: none;
+    font-family: var(--font-heading);
+    font-size: clamp(var(--text-xl), 3vw, var(--text-3xl));
+    color: var(--clr-gold-light);
+    letter-spacing: 0.08em;
+    text-align: center;
+}
+
+.hero__countdown--launched .countdown__launched-msg {
+    display: block;
+}
+
+/* ── Hero CTA Button ───────────────────────────────────── */
+.hero__cta {
+    font-size: var(--text-base);
+    padding: var(--sp-4) var(--sp-12);
+    letter-spacing: 0.06em;
+    box-shadow: var(--glow-gold), var(--shadow-lg);
+}
+
+.hero__cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 32px rgba(200, 151, 43, 0.55), var(--shadow-lg);
+}
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 600px) {
+    .hero__inner {
+        gap: var(--sp-6);
+        padding-inline: var(--sp-4);
+    }
+
+    .hero__countdown {
+        gap: var(--sp-2);
+    }
+
+    .countdown__unit {
+        min-width: 56px;
+    }
+
+    .countdown__number {
+        min-width: 60px;
+        padding: var(--sp-3) var(--sp-4);
+        font-size: var(--text-2xl);
+    }
+
+    .countdown__separator {
+        font-size: var(--text-2xl);
+        margin-top: var(--sp-3);
+    }
+
+    .hero__cta {
+        padding: var(--sp-3) var(--sp-8);
+        font-size: var(--text-sm);
+    }
+}
