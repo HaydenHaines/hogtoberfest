@@ -11,7 +11,7 @@ if ( ! $sponsors || ! is_array( $sponsors ) ) {
 
         <p class="sponsor-bar__label">Proudly Supported By</p>
 
-        <ul class="sponsor-bar__list" role="list">
+        <ul class="sponsor-bar__list">
             <?php foreach ( $sponsors as $sponsor ) :
                 $name = ! empty( $sponsor['sponsor_name'] ) ? $sponsor['sponsor_name'] : '';
                 $logo = ! empty( $sponsor['sponsor_logo'] ) ? $sponsor['sponsor_logo'] : null;
@@ -28,7 +28,7 @@ if ( ! $sponsors || ! is_array( $sponsors ) ) {
                            aria-label="<?php echo esc_attr( $name ); ?> (opens in a new tab)">
                             <img
                                 src="<?php echo esc_url( $logo['url'] ); ?>"
-                                alt="<?php echo esc_attr( $logo['alt'] ?: $name ); ?>"
+                                alt=""
                                 class="sponsor-bar__logo"
                                 width="<?php echo esc_attr( $logo['width'] ?? 200 ); ?>"
                                 height="<?php echo esc_attr( $logo['height'] ?? 80 ); ?>"

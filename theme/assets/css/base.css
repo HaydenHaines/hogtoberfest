@@ -310,7 +310,7 @@ a:hover { color: var(--clr-gold); }
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: var(--sp-8) var(--sp-12);
+    gap: var(--sp-6) var(--sp-8);
 }
 
 .sponsor-bar__item {
@@ -334,7 +334,7 @@ a:hover { color: var(--clr-gold); }
 }
 
 .sponsor-bar__logo {
-    max-height: 64px;
+    max-height: 48px;
     width: auto;
     max-width: 180px;
     object-fit: contain;
@@ -343,7 +343,12 @@ a:hover { color: var(--clr-gold); }
 }
 
 .sponsor-bar__link:hover .sponsor-bar__logo {
-    filter: grayscale(0%);
+    filter: none;
+}
+
+.sponsor-bar__link:focus-visible {
+    outline: 2px solid var(--clr-gold);
+    outline-offset: 4px;
 }
 
 .sponsor-bar__name {
@@ -355,12 +360,12 @@ a:hover { color: var(--clr-gold); }
     text-transform: uppercase;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 601px) {
     .sponsor-bar__list {
-        gap: var(--sp-6) var(--sp-8);
+        gap: var(--sp-8) var(--sp-12);
     }
 
     .sponsor-bar__logo {
-        max-height: 48px;
+        max-height: 64px;
     }
 }
