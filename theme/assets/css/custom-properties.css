@@ -12,8 +12,9 @@
     --clr-cream:        #f5edd0;
     --clr-cream-dark:   #e0d0a8;
     --clr-off-white:    #faf7ee;
+    --clr-white:        #fff;
     --clr-text-dark:    #1a1008;
-    --clr-text-muted:   #5c4a30;
+    --clr-text-muted:   #666;
 
     /* ── Typography ──────────────────────────────────────── */
     --font-display:  'Cinzel Decorative', serif;

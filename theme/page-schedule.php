@@ -13,15 +13,15 @@ $end_date   = get_field( 'event_end_date', 'option' )   ?: 'Saturday, September 
 ?>
 
 <!-- Page Header -->
-<section class="page-header">
+<header class="page-header">
     <div class="container">
         <h1 class="page-header__title">Schedule</h1>
         <p class="page-header__subtitle">All times Central &mdash; mark your calendar</p>
     </div>
-</section>
+</header>
 
 <!-- Two-Column Schedule -->
-<section class="section schedule-section">
+<section class="section schedule-section" aria-label="Event Schedule">
     <div class="container">
 
         <div class="schedule-grid">
