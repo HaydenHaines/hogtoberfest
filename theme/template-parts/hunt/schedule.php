@@ -7,8 +7,8 @@ $saturday_date = get_field( 'event_end_date',   'option' ) ?: 'Saturday, Septemb
     <div class="container">
 
         <h2 class="section-title" id="schedule-heading">Hunt Schedule</h2>
-        <p class="section-subtitle">All times are Central Time. Hunt window runs 24 hours.</p>
         <div class="gold-rule" aria-hidden="true"></div>
+        <p class="section-subtitle">All times are Central Time. Hunt window runs 24 hours.</p>
 
         <div class="hunt-schedule__grid">
 
@@ -22,7 +22,7 @@ $saturday_date = get_field( 'event_end_date',   'option' ) ?: 'Saturday, Septemb
                 <ol class="hunt-schedule__list" aria-label="Friday schedule">
 
                     <li class="hunt-schedule__entry">
-                        <div class="hunt-schedule__time" aria-label="12:00 PM">
+                        <div class="hunt-schedule__time">
                             <span class="hunt-schedule__hour">12:00</span>
                             <span class="hunt-schedule__ampm">PM</span>
                         </div>
@@ -33,7 +33,7 @@ $saturday_date = get_field( 'event_end_date',   'option' ) ?: 'Saturday, Septemb
                     </li>
 
                     <li class="hunt-schedule__entry hunt-schedule__entry--primary">
-                        <div class="hunt-schedule__time" aria-label="2:00 PM">
+                        <div class="hunt-schedule__time">
                             <span class="hunt-schedule__hour">2:00</span>
                             <span class="hunt-schedule__ampm">PM</span>
                         </div>
@@ -56,18 +56,18 @@ $saturday_date = get_field( 'event_end_date',   'option' ) ?: 'Saturday, Septemb
                 <ol class="hunt-schedule__list" aria-label="Saturday schedule">
 
                     <li class="hunt-schedule__entry hunt-schedule__entry--primary">
-                        <div class="hunt-schedule__time" aria-label="2:00 PM">
+                        <div class="hunt-schedule__time">
                             <span class="hunt-schedule__hour">2:00</span>
                             <span class="hunt-schedule__ampm">PM</span>
                         </div>
                         <div class="hunt-schedule__details">
-                            <strong class="hunt-schedule__event-name">Hunt Ends &amp; Weigh-In Opens</strong>
+                            <strong class="hunt-schedule__event-name">Hunt Ends</strong>
                             <p class="hunt-schedule__event-desc">The hunt window closes. Weigh-in station opens across from the Stroud Fire Station.</p>
                         </div>
                     </li>
 
                     <li class="hunt-schedule__entry">
-                        <div class="hunt-schedule__time" aria-label="3:00 PM">
+                        <div class="hunt-schedule__time">
                             <span class="hunt-schedule__hour">3:00</span>
                             <span class="hunt-schedule__ampm">PM</span>
                         </div>
@@ -78,7 +78,7 @@ $saturday_date = get_field( 'event_end_date',   'option' ) ?: 'Saturday, Septemb
                     </li>
 
                     <li class="hunt-schedule__entry">
-                        <div class="hunt-schedule__time" aria-label="5:00 PM">
+                        <div class="hunt-schedule__time">
                             <span class="hunt-schedule__hour">5:00</span>
                             <span class="hunt-schedule__ampm">PM</span>
                         </div>

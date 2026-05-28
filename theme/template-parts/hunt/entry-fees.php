@@ -9,8 +9,8 @@ $per_additional = get_field( 'entry_fee_per_additional', 'option' ) ?: 75;
     <div class="container">
 
         <h2 class="section-title" id="entry-fees-heading">Entry Fees</h2>
-        <p class="section-subtitle">Teams of 2 to 4 hunters. Register early — spots are limited.</p>
         <div class="gold-rule" aria-hidden="true"></div>
+        <p class="section-subtitle">Teams of 2 to 4 hunters. Register early — spots are limited.</p>
 
         <div class="entry-fees__grid">
 
@@ -18,7 +18,7 @@ $per_additional = get_field( 'entry_fee_per_additional', 'option' ) ?: 75;
             <div class="entry-fees__card" aria-label="2-Man Team pricing">
                 <div class="entry-fees__card-inner">
                     <h3 class="entry-fees__team-size">2-Man Team</h3>
-                    <div class="entry-fees__price" aria-label="<?php echo esc_attr( $fee_2man ); ?> entry fee">
+                    <div class="entry-fees__price">
                         <?php echo esc_html( $fee_2man ); ?>
                     </div>
                     <ul class="entry-fees__features">
@@ -37,10 +37,10 @@ $per_additional = get_field( 'entry_fee_per_additional', 'option' ) ?: 75;
 
             <!-- 3-Man Team (most popular) -->
             <div class="entry-fees__card entry-fees__card--popular" aria-label="3-Man Team pricing, most popular">
-                <div class="entry-fees__popular-badge" aria-label="Most Popular">Most Popular</div>
+                <div class="entry-fees__popular-badge">Most Popular</div>
                 <div class="entry-fees__card-inner">
                     <h3 class="entry-fees__team-size">3-Man Team</h3>
-                    <div class="entry-fees__price" aria-label="<?php echo esc_attr( $fee_3man ); ?> entry fee">
+                    <div class="entry-fees__price">
                         <?php echo esc_html( $fee_3man ); ?>
                     </div>
                     <ul class="entry-fees__features">
@@ -61,7 +61,7 @@ $per_additional = get_field( 'entry_fee_per_additional', 'option' ) ?: 75;
             <div class="entry-fees__card" aria-label="4-Man Team pricing">
                 <div class="entry-fees__card-inner">
                     <h3 class="entry-fees__team-size">4-Man Team</h3>
-                    <div class="entry-fees__price" aria-label="<?php echo esc_attr( $fee_4man ); ?> entry fee">
+                    <div class="entry-fees__price">
                         <?php echo esc_html( $fee_4man ); ?>
                     </div>
                     <ul class="entry-fees__features">

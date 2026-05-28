@@ -806,7 +806,6 @@
     background: var(--clr-green-dark);
     border-color: var(--clr-green-dark);
     color: var(--clr-gold);
-    outline: none;
 }
 
 .register-cta-block .btn:focus-visible {
