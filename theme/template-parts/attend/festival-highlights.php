@@ -14,27 +14,27 @@
         <div class="cards-grid">
 
             <div class="card">
-                <p class="card__eyebrow"><?php esc_html_e( 'Food & Drink', 'hogtoberfest' ); ?></p>
-                <h3 class="card__title"><?php esc_html_e( 'BBQ & Beer Garden', 'hogtoberfest' ); ?></h3>
-                <p class="card__body"><?php esc_html_e( 'Award-winning BBQ pits, local food vendors, and a cold beer garden. Something for every appetite, from smoked brisket to funnel cakes.', 'hogtoberfest' ); ?></p>
+                <p class="card__eyebrow">Food &amp; Drink</p>
+                <h3 class="card__title">BBQ &amp; Beer Garden</h3>
+                <p class="card__body">Award-winning BBQ pits, local food vendors, and a cold beer garden. Something for every appetite, from smoked brisket to funnel cakes.</p>
             </div>
 
             <div class="card">
-                <p class="card__eyebrow"><?php esc_html_e( 'Entertainment', 'hogtoberfest' ); ?></p>
-                <h3 class="card__title"><?php esc_html_e( 'Live Music', 'hogtoberfest' ); ?></h3>
-                <p class="card__body"><?php esc_html_e( 'Local and regional acts perform on the Main Stage all day Saturday. Country, blues, and everything in between — bring your lawn chair.', 'hogtoberfest' ); ?></p>
+                <p class="card__eyebrow">Entertainment</p>
+                <h3 class="card__title">Live Music</h3>
+                <p class="card__body">Local and regional acts perform on the Main Stage all day Saturday. Country, blues, and everything in between — bring your lawn chair.</p>
             </div>
 
             <div class="card">
-                <p class="card__eyebrow"><?php esc_html_e( 'Shopping', 'hogtoberfest' ); ?></p>
-                <h3 class="card__title"><?php esc_html_e( 'Local Vendors', 'hogtoberfest' ); ?></h3>
-                <p class="card__body"><?php esc_html_e( 'Artisans, craftspeople, and local businesses line Main Street. Find handmade goods, Western wear, hunting gear, and one-of-a-kind Route 66 keepsakes.', 'hogtoberfest' ); ?></p>
+                <p class="card__eyebrow">Shopping</p>
+                <h3 class="card__title">Local Vendors</h3>
+                <p class="card__body">Artisans, craftspeople, and local businesses line Main Street. Find handmade goods, Western wear, hunting gear, and one-of-a-kind Route 66 keepsakes.</p>
             </div>
 
             <div class="card">
-                <p class="card__eyebrow"><?php esc_html_e( 'Family', 'hogtoberfest' ); ?></p>
-                <h3 class="card__title"><?php esc_html_e( 'Kids Zone', 'hogtoberfest' ); ?></h3>
-                <p class="card__body"><?php esc_html_e( 'Bounce house village, carnival games, and activities for children of all ages. The whole family is welcome — Hogtoberfest is a community celebration.', 'hogtoberfest' ); ?></p>
+                <p class="card__eyebrow">Family</p>
+                <h3 class="card__title">Kids Zone</h3>
+                <p class="card__body">Bounce house village, carnival games, and activities for children of all ages. The whole family is welcome — Hogtoberfest is a community celebration.</p>
             </div>
 
         </div>

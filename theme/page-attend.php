@@ -7,8 +7,8 @@ get_header();
 ?>
 
 <header class="page-header">
-    <h1 class="page-header__title"><?php esc_html_e( 'The Festival', 'hogtoberfest' ); ?></h1>
-    <p class="page-header__subtitle"><?php esc_html_e( 'Hogtoberfest Fall Festival · Downtown Stroud, Oklahoma', 'hogtoberfest' ); ?></p>
+    <h1 class="page-header__title">The Festival</h1>
+    <p class="page-header__subtitle">Hogtoberfest Fall Festival &middot; Downtown Stroud, Oklahoma</p>
 </header>
 
 <main id="main-content" class="site-main" role="main">
