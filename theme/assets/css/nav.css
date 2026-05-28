@@ -1,6 +1,8 @@
 /* ── Skip Navigation ───────────────────────────────────── */
 .sr-only--focusable:focus {
-    position: static;
+    position: absolute;
+    top: var(--sp-2);
+    left: var(--sp-2);
     width: auto;
     height: auto;
     padding: var(--sp-2) var(--sp-4);

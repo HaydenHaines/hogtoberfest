@@ -25,7 +25,7 @@
                 loading="eager">
         </a>
 
-        <nav class="primary-nav" role="navigation" aria-label="Primary navigation">
+        <nav class="primary-nav" id="primary-nav-list" role="navigation" aria-label="Primary navigation">
             <?php
             wp_nav_menu( [
                 'theme_location' => 'primary',
