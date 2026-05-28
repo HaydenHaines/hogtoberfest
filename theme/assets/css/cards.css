@@ -162,15 +162,15 @@
 }
 
 /* Ensure content sits above the mascot watermark */
-.prize-spotlight .container > * {
+.prize-spotlight .container > *:not(.prize-spotlight__mascot-wrap) {
     position: relative;
     z-index: 1;
 }
 
 /* ── Main Pot block ────────────────────────────────────── */
 .prize-spotlight__main-pot {
-    background-color: rgba(200, 151, 43, 0.12);
-    border: 1px solid rgba(200, 151, 43, 0.3);
+    background-color: color-mix(in srgb, var(--clr-gold) 12%, transparent);
+    border: 1px solid color-mix(in srgb, var(--clr-gold) 30%, transparent);
     border-radius: var(--radius-md);
     padding: var(--sp-8);
     margin-bottom: var(--sp-12);
@@ -213,8 +213,12 @@
     margin-bottom: var(--sp-8);
 }
 
-@media (max-width: 768px) {
+.prize-spotlight__mascot-wrap {
+    display: none;
+}
+
+@media (min-width: 769px) {
     .prize-spotlight__mascot-wrap {
-        display: none;
+        display: block;
     }
 }
