@@ -1,0 +1,17 @@
+# Docker volumes (managed by Docker, not tracked)
+# WordPress core is in the wp_data Docker volume, not tracked in git
+# Only the theme/ directory is tracked
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Editor artifacts
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local env overrides
+.env
+.env.local
