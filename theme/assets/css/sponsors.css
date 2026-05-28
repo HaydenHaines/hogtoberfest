@@ -1,0 +1,278 @@
+/* ── Lions Club Section ─────────────────────────────────── */
+.sponsors-lions {
+    background-color: var(--clr-off-white);
+}
+
+.sponsors-lions__inner {
+    display: grid;
+    grid-template-columns: 1fr;           /* mobile: stacked */
+    gap: var(--sp-8);
+    align-items: start;
+}
+
+.sponsors-lions__logo-wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 0;
+}
+
+.sponsors-lions__logo {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));  /* acceptable in filter context */
+}
+
+.sponsors-lions__heading {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    color: var(--clr-green-dark);
+    margin: 0 0 var(--sp-4) 0;
+    letter-spacing: 0.03em;
+}
+
+.sponsors-lions__content p {
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    color: var(--clr-text-dark);
+    line-height: 1.75;
+    margin: 0 0 var(--sp-4) 0;
+}
+
+.sponsors-lions__content p:last-child {
+    margin-bottom: 0;
+}
+
+.sponsors-lions__content strong {
+    color: var(--clr-green-dark);
+}
+
+/* ── Sponsor Logo Grid ──────────────────────────────────── */
+.sponsors-grid-section {
+    background-color: var(--clr-cream);
+}
+
+.sponsors-logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--sp-6);
+    margin-top: var(--sp-8);
+}
+
+.sponsor-tile {
+    background-color: var(--clr-white);
+    border: 1px solid var(--clr-cream-dark);
+    border-radius: var(--radius-md);
+    padding: var(--sp-6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+    box-shadow: 0 1px 3px color-mix(in srgb, var(--clr-brown-dark) 6%, transparent);
+    transition: border-color var(--ease-base), box-shadow var(--ease-base);
+}
+
+.sponsor-tile:hover {
+    border-color: var(--clr-gold);
+    box-shadow: var(--shadow-md);
+}
+
+.sponsor-tile__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.sponsor-tile__img {
+    max-width: 100%;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(20%);
+    transition: filter var(--ease-base);
+}
+
+.sponsor-tile:hover .sponsor-tile__img {
+    filter: grayscale(0%);
+}
+
+.sponsor-tile__name {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--clr-green-dark);
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+
+.sponsors-coming-soon {
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    color: var(--clr-text-muted);
+    font-style: italic;
+    text-align: center;
+    margin-top: var(--sp-8);
+    padding: var(--sp-12);
+    background-color: var(--clr-white);
+    border: 1px dashed var(--clr-cream-dark);
+    border-radius: var(--radius-md);
+}
+
+/* ── Community Partners ─────────────────────────────────── */
+.sponsors-partners {
+    background-color: var(--clr-green-dark);
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: 1fr;           /* mobile: stacked */
+    gap: var(--sp-6);
+    margin-top: var(--sp-8);
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.partner-card {
+    background-color: var(--clr-green-mid);
+    border: 1px solid var(--clr-green-light);
+    border-radius: var(--radius-md);
+    padding: var(--sp-6);
+    text-align: center;
+    transition: border-color var(--ease-base);
+}
+
+.partner-card:hover {
+    border-color: var(--clr-gold);
+}
+
+.partner-card__icon {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 auto var(--sp-4);
+}
+
+.partner-card__icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.partner-card__name {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--clr-gold);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 0 0 var(--sp-2) 0;
+}
+
+.partner-card__role {
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    color: var(--clr-cream-dark);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ── Become a Sponsor CTA ───────────────────────────────── */
+.sponsors-cta-section {
+    background-color: var(--clr-off-white);
+}
+
+.sponsor-cta-box {
+    border: var(--border-gold);
+    border-radius: var(--radius-md);
+    padding: var(--sp-6) var(--sp-4);     /* mobile padding */
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--clr-white);
+    box-shadow: var(--shadow-md);
+}
+
+.sponsor-cta-box__heading {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    color: var(--clr-green-dark);
+    margin: 0 0 var(--sp-4) 0;
+    letter-spacing: 0.03em;
+}
+
+.sponsor-cta-box__body {
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    color: var(--clr-text-dark);
+    line-height: 1.7;
+    margin: 0 0 var(--sp-6) 0;
+}
+
+.sponsor-cta-box__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sp-4);
+}
+
+.sponsor-cta-box__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-2);
+    font-family: var(--font-ui);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--clr-green-dark);
+    text-decoration: none;
+    transition: color var(--ease-fast);
+}
+
+.sponsor-cta-box__link:hover {
+    color: var(--clr-gold-dark);
+}
+
+.sponsor-cta-box__link svg {
+    width: 1.125rem;
+    height: 1.125rem;
+    color: var(--clr-gold);
+    flex-shrink: 0;
+}
+
+/* ── Responsive (min-width) ─────────────────────────────── */
+@media (min-width: 601px) {
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sponsor-cta-box {
+        padding: var(--sp-8) var(--sp-12);
+    }
+
+    .sponsor-cta-box__contact {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--sp-4) var(--sp-8);
+    }
+}
+
+@media (min-width: 901px) {
+    .sponsors-lions__inner {
+        grid-template-columns: 280px 1fr;
+        gap: var(--sp-12);
+    }
+
+    .sponsors-lions__logo-wrap {
+        padding-top: var(--sp-4);
+    }
+
+    .sponsors-lions__logo {
+        max-width: 280px;
+    }
+}
