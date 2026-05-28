@@ -65,7 +65,7 @@
 		</div>
 
 		<!-- Archery / Primitive Division Payout Table -->
-		<div class="main-pot__table-wrap" style="margin-top: var(--sp-8)">
+		<div class="main-pot__table-wrap">
 			<h3 class="main-pot__table-heading">Archery / Primitive Division</h3>
 			<table class="main-pot__table">
 				<caption class="sr-only">Archery / Primitive division payout breakdown</caption>

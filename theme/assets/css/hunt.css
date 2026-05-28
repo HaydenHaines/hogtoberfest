@@ -384,6 +384,10 @@
     border: 1px solid color-mix(in srgb, var(--clr-gold) 25%, transparent);
 }
 
+.main-pot__table-wrap + .main-pot__table-wrap {
+    margin-top: var(--sp-8);
+}
+
 .main-pot__table-heading {
     font-family: var(--font-heading);
     font-size: var(--text-xl);
