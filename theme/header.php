@@ -21,7 +21,7 @@
                 src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo-primary.png' ); ?>"
                 alt="Hogtoberfest"
                 width="180"
-                height="64"
+                height="120"
                 loading="eager">
         </a>
 

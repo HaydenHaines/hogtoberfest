@@ -1,5 +1,5 @@
 <?php
-$sponsors = get_field( 'sponsors', 'option' );
+$sponsors = hog_option_sponsors();
 
 if ( ! $sponsors || ! is_array( $sponsors ) ) {
     return;

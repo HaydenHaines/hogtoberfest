@@ -1,6 +1,6 @@
 <?php
 $reg_url  = hogtoberfest_registration_url();
-$reg_open = get_field( 'registration_open', 'option' );
+$reg_open = hog_option( 'registration_open' );
 ?>
 <div class="register-cta-block">
     <div class="register-cta-block__inner">

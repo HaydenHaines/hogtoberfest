@@ -2,7 +2,7 @@
 $fee_2man       = hogtoberfest_entry_fee( 2 );
 $fee_3man       = hogtoberfest_entry_fee( 3 );
 $fee_4man       = hogtoberfest_entry_fee( 4 );
-$per_additional = get_field( 'entry_fee_per_additional', 'option' ) ?: 75;
+$per_additional = hog_option( 'entry_fee_per_additional', 75 ) ?: 75;
 ?>
 
 <section class="section section--brown hunt-entry-fees" aria-labelledby="entry-fees-heading">

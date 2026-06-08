@@ -33,7 +33,7 @@ function hogtoberfest_scripts(): void {
     wp_enqueue_script( 'hog-countdown', "$tu/assets/js/countdown.js", [], $v, true );
 
     // Pass countdown target from ACF to JS
-    $target = get_field( 'countdown_target', 'option' );
+    $target = hog_option( 'countdown_target' );
     if ( $target ) {
         wp_localize_script( 'hog-countdown', 'HOG', [
             'countdownTarget' => esc_js( $target ),

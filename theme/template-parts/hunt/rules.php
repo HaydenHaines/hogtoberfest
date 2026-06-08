@@ -43,5 +43,9 @@
 
 		</ol>
 
+		<div class="hunt-rules__full-link" style="text-align:center;margin-top:2.5rem">
+			<a class="btn btn--outline" href="<?php echo esc_url( home_url( '/full-rules/' ) ); ?>">View the Full Official Rules (PDF)</a>
+		</div>
+
 	</div>
 </section>

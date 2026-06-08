@@ -141,7 +141,7 @@ get_header();
                         <a href="mailto:stroudlionsclub@gmail.com">stroudlionsclub@gmail.com</a>
                     </li>
                 </ul>
-                <p class="vendor-tbd-application">Vendor applications open [date TBD]. Contact us to get on the early notification list.</p>
+                <p class="vendor-tbd-application">Vendor applications opening soon. Contact us to get on the early notification list.</p>
             </div>
 
             <p class="vendor-tbd-note">

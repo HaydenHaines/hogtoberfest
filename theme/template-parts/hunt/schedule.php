@@ -1,6 +1,6 @@
 <?php
-$friday_date   = get_field( 'event_start_date', 'option' ) ?: 'Friday, September 11';
-$saturday_date = get_field( 'event_end_date',   'option' ) ?: 'Saturday, September 12, 2026';
+$friday_date   = hog_option( 'event_start_date', 'Friday, September 11' );
+$saturday_date = hog_option( 'event_end_date',   'Saturday, September 12, 2026' );
 ?>
 
 <section class="section section--dark hunt-schedule" aria-labelledby="schedule-heading">

@@ -1,6 +1,6 @@
 <?php
-$event_start = get_field( 'event_start_date', 'option' ) ?: 'September 11';
-$event_end   = get_field( 'event_end_date', 'option' )   ?: 'September 12, 2026';
+$event_start = hog_option( 'event_start_date', 'September 11' );
+$event_end   = hog_option( 'event_end_date',   'September 12, 2026' );
 $reg_url     = hogtoberfest_registration_url();
 $theme_uri   = get_template_directory_uri();
 ?>
@@ -14,7 +14,7 @@ $theme_uri   = get_template_directory_uri();
             alt="Stroud Hogtoberfest — Inaugural Hog Hunt &amp; Fall Festival"
             class="hero__logo"
             width="960"
-            height="480"
+            height="640"
             loading="eager"
             fetchpriority="high">
 

@@ -9,8 +9,8 @@
                     src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo-footer.png' ); ?>"
                     alt="Hogtoberfest"
                     class="site-footer__logo"
-                    width="220"
-                    height="56"
+                    width="200"
+                    height="133"
                     loading="lazy">
             </a>
             <p class="site-footer__tagline">Hunt. Compete. Celebrate.</p>

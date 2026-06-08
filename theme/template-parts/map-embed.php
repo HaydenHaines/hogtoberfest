@@ -1,6 +1,6 @@
 <?php
-$map_embed_url  = get_field( 'map_embed_url',  'option' );
-$directions_url = get_field( 'map_directions_url', 'option' );
+$map_embed_url  = hog_option( 'map_embed_url' );
+$directions_url = hog_option( 'map_directions_url' );
 ?>
 <section class="section section--dark map-embed-section" aria-labelledby="map-embed-heading">
     <div class="container">

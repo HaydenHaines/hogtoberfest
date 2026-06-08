@@ -8,7 +8,7 @@
 
 get_header();
 
-$sponsors = get_field( 'sponsors', 'option' );
+$sponsors = hog_option_sponsors();
 ?>
 
 <header class="page-header">

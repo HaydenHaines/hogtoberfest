@@ -260,7 +260,7 @@ get_header();
                 <h2 class="contact-form-wrap__heading">Send a Message</h2>
                 <div class="gold-rule" aria-hidden="true"></div>
                 <?php
-                echo do_shortcode( '[contact-form-7 id="26" title="Hogtoberfest Contact"]' );
+                echo do_shortcode( '[contact-form-7 id="83c5636" title="Hogtoberfest Contact"]' );
                 ?>
             </div>
 

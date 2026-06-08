@@ -14,14 +14,22 @@
 		<div class="hunt-divisions__grid">
 
 			<article class="division-card">
-				<div class="division-card__icon"><span aria-hidden="true">🐕</span></div>
+				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/division-dogs.jpg' ); ?>"
+				     alt="Hunting dog pursuing a wild hog through the woods"
+				     class="division-card__photo"
+				     width="510" height="512"
+				     loading="lazy">
 				<h3 class="division-card__title">Dog Division</h3>
 				<p class="division-card__desc">Hunt with dogs. Separate prize pool from the No Dog / Thermal Division. Choose this division at registration.</p>
 				<span class="division-card__tag">Dog Hunting</span>
 			</article>
 
 			<article class="division-card">
-				<div class="division-card__icon"><span aria-hidden="true">🔭</span></div>
+				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/division-thermal.jpg' ); ?>"
+				     alt="Wild hogs captured on thermal night-vision camera"
+				     class="division-card__photo"
+				     width="1024" height="576"
+				     loading="lazy">
 				<h3 class="division-card__title">No Dog / Thermal Division</h3>
 				<p class="division-card__desc">Hunt without dogs. Thermal and other non-dog methods permitted. Separate prize pool from the Dog Division.</p>
 				<span class="division-card__tag">No Dog / Thermal</span>
