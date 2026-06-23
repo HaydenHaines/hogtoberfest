@@ -37,8 +37,8 @@ $end_date   = hog_option( 'event_end_date',   'Saturday, September 12, 2026' );
 
                     <div class="schedule-item">
                         <dt class="schedule-item__time">12:00 PM</dt>
-                        <dd class="schedule-item__label">Rules Meeting</dd>
-                        <dd class="schedule-item__note">All registered team captains must attend</dd>
+                        <dd class="schedule-item__label">Pre-Hunt Rules Review and Q&amp;A</dd>
+                        <dd class="schedule-item__note">Review regulations, boundaries, and safety requirements before the hunt &mdash; open to all registered teams</dd>
                     </div>
 
                     <div class="schedule-item schedule-item--key">
@@ -68,7 +68,7 @@ $end_date   = hog_option( 'event_end_date',   'Saturday, September 12, 2026' );
                     <div class="schedule-item schedule-item--key">
                         <dt class="schedule-item__time">2:00 PM</dt>
                         <dd class="schedule-item__label">Hunt Ends / Weigh-In Opens</dd>
-                        <dd class="schedule-item__note">Hunt window closes; teams bring hogs to the weigh-in station across from the fire station</dd>
+                        <dd class="schedule-item__note">Hunt window closes; teams bring hogs to the weigh-in behind the Stroud Main Street (Route 66) Pavilion at 4th Avenue and 2nd Street</dd>
                     </div>
 
                     <div class="schedule-item schedule-item--deadline">
@@ -80,7 +80,7 @@ $end_date   = hog_option( 'event_end_date',   'Saturday, September 12, 2026' );
                     <div class="schedule-item schedule-item--highlight">
                         <dt class="schedule-item__time">5:00 PM</dt>
                         <dd class="schedule-item__label">Awards Ceremony</dd>
-                        <dd class="schedule-item__note">Downtown Stroud Pavilion &mdash; champions crowned, prizes awarded</dd>
+                        <dd class="schedule-item__note">Stroud Main Street (Route 66) Pavilion &mdash; champions crowned, prizes awarded</dd>
                     </div>
 
                     <div class="schedule-item">

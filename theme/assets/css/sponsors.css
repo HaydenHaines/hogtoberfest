@@ -125,6 +125,126 @@
     border-radius: var(--radius-md);
 }
 
+/* ── Presenting Sponsor Banner ──────────────────────────── */
+.sponsors-presenting {
+    background-color: var(--clr-cream);
+    padding-block: var(--sp-12);
+}
+
+.presenting-banner {
+    max-width: 760px;
+    margin-inline: auto;
+    text-align: center;
+    background: linear-gradient(160deg, var(--clr-green-dark) 0%, var(--clr-brown-dark) 100%);
+    border: 2px solid var(--clr-gold);
+    border-radius: var(--radius-lg);
+    padding: var(--sp-8) var(--sp-6);
+    box-shadow: var(--shadow-md);
+}
+
+.presenting-banner__eyebrow {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    color: var(--clr-gold);
+    letter-spacing: 0.04em;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.presenting-banner__label {
+    font-family: var(--font-ui);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--clr-cream-dark);
+    margin: var(--sp-3) 0 var(--sp-6);
+}
+
+.presenting-banner__sponsor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-white);
+    border-radius: var(--radius-md);
+    padding: var(--sp-8) var(--sp-6);
+    min-height: 160px;
+    margin-bottom: var(--sp-6);
+}
+
+.presenting-banner__sponsor .sponsor-tile__img {
+    max-height: 180px;
+    max-width: 100%;
+    width: auto;
+    object-fit: contain;
+    filter: none;
+}
+
+.presenting-banner__sponsor .sponsor-tile__name {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+    font-weight: 700;
+    color: var(--clr-green-dark);
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+}
+
+.presenting-banner__tier {
+    display: inline-block;
+    font-family: var(--font-ui);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--clr-brown-dark);
+    background: var(--clr-gold);
+    border-radius: 20px;
+    padding: 6px 18px;
+    margin: 0;
+}
+
+/* ── Sponsor Tiers ──────────────────────────────────────── */
+.sponsor-tier {
+    margin-top: var(--sp-12);
+}
+
+.sponsor-tier:first-of-type {
+    margin-top: var(--sp-8);
+}
+
+.sponsor-tier__heading {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    color: var(--clr-green-dark);
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 0 0 var(--sp-2);
+}
+
+.sponsor-tier__heading::after {
+    content: '';
+    display: block;
+    width: 56px;
+    height: 2px;
+    background-color: var(--clr-gold);
+    margin: var(--sp-3) auto 0;
+}
+
+.sponsor-tier .sponsors-logo-grid {
+    margin-top: var(--sp-6);
+}
+
+/* Tier emphasis: larger tiles/logos toward the top tiers */
+.sponsor-tier--king-boar .sponsor-tile  { min-height: 150px; }
+.sponsor-tier--king-boar .sponsor-tile__img { max-height: 120px; }
+
+.sponsor-tier--big-boar .sponsor-tile   { min-height: 120px; }
+.sponsor-tier--big-boar .sponsor-tile__img  { max-height: 90px; }
+
+.sponsor-tier--trophy-hog .sponsor-tile { min-height: 104px; }
+.sponsor-tier--trophy-hog .sponsor-tile__img { max-height: 72px; }
+
 /* ── Community Partners ─────────────────────────────────── */
 .sponsors-partners {
     background-color: var(--clr-green-dark);

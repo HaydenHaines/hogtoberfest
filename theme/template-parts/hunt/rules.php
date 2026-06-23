@@ -9,7 +9,12 @@
 	<div class="container">
 		<h2 class="section-title" id="rules-heading">Hunt Rules</h2>
 		<div class="gold-rule" aria-hidden="true"></div>
-		<p class="section-subtitle">All teams must review and agree to these rules at the mandatory pre-hunt meeting.</p>
+		<p class="section-subtitle">All teams must read, understand, and agree to these rules as a condition of registration.</p>
+
+		<div class="rules-agreement" role="note">
+			<span class="rules-agreement__badge">Registration Agreement</span>
+			<p class="rules-agreement__text">By registering for Hogtoberfest, participants acknowledge that they have read, understand, and agree to comply with all event rules and liability waiver requirements.</p>
+		</div>
 
 		<ol class="hunt-rules__list">
 
@@ -43,8 +48,9 @@
 
 		</ol>
 
-		<div class="hunt-rules__full-link" style="text-align:center;margin-top:2.5rem">
-			<a class="btn btn--outline" href="<?php echo esc_url( home_url( '/full-rules/' ) ); ?>">View the Full Official Rules (PDF)</a>
+		<div class="hunt-rules__cta">
+			<p class="hunt-rules__cta-text">Read the complete rulebook and liability waiver before you register.</p>
+			<a class="btn btn--register hunt-rules__cta-btn" href="<?php echo esc_url( home_url( '/full-rules/' ) ); ?>">View the Full Official Rulebook &amp; Waiver (PDF)</a>
 		</div>
 
 	</div>

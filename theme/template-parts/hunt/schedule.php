@@ -27,8 +27,8 @@ $saturday_date = hog_option( 'event_end_date',   'Saturday, September 12, 2026' 
                             <span class="hunt-schedule__ampm">PM</span>
                         </div>
                         <div class="hunt-schedule__details">
-                            <strong class="hunt-schedule__event-name">Rules Meeting</strong>
-                            <p class="hunt-schedule__event-desc">Mandatory for all registered teams. Review regulations, boundaries, and safety requirements before the hunt begins.</p>
+                            <strong class="hunt-schedule__event-name">Pre-Hunt Rules Review and Q&amp;A</strong>
+                            <p class="hunt-schedule__event-desc">Review regulations, boundaries, and safety requirements before the hunt begins. Open to all registered teams.</p>
                         </div>
                     </li>
 
@@ -62,7 +62,7 @@ $saturday_date = hog_option( 'event_end_date',   'Saturday, September 12, 2026' 
                         </div>
                         <div class="hunt-schedule__details">
                             <strong class="hunt-schedule__event-name">Hunt Ends</strong>
-                            <p class="hunt-schedule__event-desc">The hunt window closes. Weigh-in station opens across from the Stroud Fire Station.</p>
+                            <p class="hunt-schedule__event-desc">The hunt window closes. Weigh-in opens behind the Stroud Main Street (Route 66) Pavilion at 4th Avenue and 2nd Street.</p>
                         </div>
                     </li>
 
@@ -84,7 +84,7 @@ $saturday_date = hog_option( 'event_end_date',   'Saturday, September 12, 2026' 
                         </div>
                         <div class="hunt-schedule__details">
                             <strong class="hunt-schedule__event-name">Awards Ceremony</strong>
-                            <p class="hunt-schedule__event-desc">Winners announced at the Downtown Pavilion. Prize distribution follows immediately after.</p>
+                            <p class="hunt-schedule__event-desc">Winners announced at the Stroud Main Street (Route 66) Pavilion.</p>
                         </div>
                     </li>
 

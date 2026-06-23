@@ -2,13 +2,91 @@
 /**
  * Template Name: Sponsors
  *
- * Stroud Lions Club section, ACF sponsor logo grid, community partners,
- * and a "Become a Sponsor" CTA. Sponsors repeater comes from ACF Options.
+ * Stroud Lions Club section, presenting-sponsor banner, tiered sponsor grid,
+ * community partners, and a "Become a Sponsor" CTA.
+ *
+ * Sponsor tiers are defined in the $sponsor_tiers array below. To add a logo,
+ * drop an image into assets/images/sponsors/ named with the sponsor's slug
+ * (e.g. tatanka-ranch.png). Until the file exists, the styled sponsor name
+ * shows as a graceful fallback. Optional 'url' links the logo to a website.
  */
 
 get_header();
 
-$sponsors = hog_option_sponsors();
+$sponsor_tiers = [
+    [
+        'name'     => 'Presenting Sponsor',
+        'slug'     => 'presenting',
+        'sponsors' => [
+            [ 'name' => 'Sac and Fox Nation Casino', 'logo' => 'sac-and-fox-casino', 'url' => '' ],
+        ],
+    ],
+    [
+        'name'     => 'King Boar Sponsors',
+        'slug'     => 'king-boar',
+        'sponsors' => [
+            [ 'name' => 'Tatanka Ranch', 'logo' => 'tatanka-ranch', 'url' => '' ],
+            [ 'name' => 'Five Star BBQ', 'logo' => 'five-star-bbq', 'url' => '' ],
+        ],
+    ],
+    [
+        'name'     => 'Big Boar Sponsors',
+        'slug'     => 'big-boar',
+        'sponsors' => [
+            [ 'name' => 'Genesis',     'logo' => 'genesis',     'url' => '' ],
+            [ 'name' => 'Jim Hodgens', 'logo' => 'jim-hodgens', 'url' => '' ],
+        ],
+    ],
+    [
+        'name'     => 'Trophy Hog Sponsors',
+        'slug'     => 'trophy-hog',
+        'sponsors' => [
+            [ 'name' => 'Five Tool Management', 'logo' => 'five-tool-management', 'url' => '' ],
+            [ 'name' => "D's Specialty House",  'logo' => 'ds-specialty-house',    'url' => '' ],
+        ],
+    ],
+];
+
+/**
+ * Returns a sponsor's logo <img> if a matching file exists in
+ * assets/images/sponsors/, otherwise the styled sponsor name.
+ */
+$hog_sponsor_logo = static function ( array $sponsor ): string {
+    $slug = $sponsor['logo'] ?? '';
+    $name = $sponsor['name'] ?? '';
+    $base = '/assets/images/sponsors/' . $slug;
+    $uri  = '';
+    foreach ( [ 'svg', 'png', 'webp', 'jpg', 'jpeg' ] as $ext ) {
+        if ( $slug && file_exists( get_template_directory() . $base . '.' . $ext ) ) {
+            $uri = get_template_directory_uri() . $base . '.' . $ext;
+            break;
+        }
+    }
+    if ( $uri ) {
+        return sprintf(
+            '<img src="%s" alt="%s" class="sponsor-tile__img" loading="lazy">',
+            esc_url( $uri ),
+            esc_attr( $name )
+        );
+    }
+    return sprintf( '<span class="sponsor-tile__name">%s</span>', esc_html( $name ) );
+};
+
+/**
+ * Renders a sponsor as a linked logo/name (or unlinked when no url).
+ */
+$hog_sponsor_render = static function ( array $sponsor ) use ( $hog_sponsor_logo ): string {
+    $inner = $hog_sponsor_logo( $sponsor );
+    if ( ! empty( $sponsor['url'] ) ) {
+        return sprintf(
+            '<a href="%s" class="sponsor-tile__link" target="_blank" rel="noopener noreferrer sponsored" aria-label="%s (opens in a new tab)">%s</a>',
+            esc_url( $sponsor['url'] ),
+            esc_attr( $sponsor['name'] ?? '' ),
+            $inner
+        );
+    }
+    return $inner;
+};
 ?>
 
 <header class="page-header">
@@ -35,61 +113,46 @@ $sponsors = hog_option_sponsors();
                 <h2 class="sponsors-lions__heading" id="sponsors-lions-heading">Stroud Lions Club</h2>
                 <div class="gold-rule" aria-hidden="true"></div>
                 <p>The Stroud Lions Club has served the Stroud community since 1934. We are a volunteer service organization dedicated to giving back to the people and families of Lincoln County.</p>
-                <p>Hogtoberfest supports local community programs, youth organizations, and first responders. <strong>50% of all hunt entry fees go directly to Lions Club charitable programs</strong> &mdash; every registration makes a difference.</p>
+                <p>Through Hogtoberfest, Stroud Lions Club supports local community programs, youth organizations, and first responders. <strong>Fifty percent (50%) of all Main Pot entry fees go to Stroud Lions Club to support charitable and community service programs.</strong></p>
                 <p>When you sponsor Hogtoberfest, you&rsquo;re not just advertising to thousands of attendees. You&rsquo;re investing in Stroud.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Sponsor Logo Grid -->
-<section class="section section--cream sponsors-grid-section" aria-labelledby="sponsors-grid-heading">
+<!-- Presenting Sponsor Banner -->
+<?php $presenting = $sponsor_tiers[0]['sponsors'][0]; ?>
+<section class="section sponsors-presenting" aria-labelledby="presenting-heading">
+    <div class="container">
+        <div class="presenting-banner">
+            <p class="presenting-banner__eyebrow">Hogtoberfest</p>
+            <p class="presenting-banner__label" id="presenting-heading">Presented By</p>
+            <div class="presenting-banner__sponsor">
+                <?php echo $hog_sponsor_render( $presenting ); ?>
+            </div>
+            <p class="presenting-banner__tier">Presenting Sponsor</p>
+        </div>
+    </div>
+</section>
+
+<!-- Tiered Sponsor Grid -->
+<section class="section section--cream sponsors-tiers-section" aria-labelledby="sponsors-grid-heading">
     <div class="container">
         <h2 class="section-title" id="sponsors-grid-heading">Event Sponsors</h2>
         <div class="gold-rule" aria-hidden="true"></div>
 
-        <?php if ( ! empty( $sponsors ) ) : ?>
-
-            <div class="sponsors-logo-grid">
-                <?php foreach ( $sponsors as $sponsor ) :
-                    $name     = ! empty( $sponsor['sponsor_name'] ) ? $sponsor['sponsor_name'] : '';
-                    $logo     = ! empty( $sponsor['sponsor_logo'] ) ? $sponsor['sponsor_logo'] : null;
-                    $url      = ! empty( $sponsor['sponsor_url'] )  ? $sponsor['sponsor_url']  : '';
-                    $logo_url = $logo ? $logo['url'] : '';
-                ?>
-                    <div class="sponsor-tile">
-                        <?php if ( $url ) : ?>
-                            <a href="<?php echo esc_url( $url ); ?>"
-                               class="sponsor-tile__link"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               aria-label="<?php echo esc_attr( $name ); ?> (opens in new tab)">
-                        <?php endif; ?>
-
-                        <?php if ( $logo_url ) : ?>
-                            <img
-                                src="<?php echo esc_url( $logo_url ); ?>"
-                                alt="<?php echo esc_attr( $name ); ?>"
-                                class="sponsor-tile__img"
-                                width="300"
-                                height="150"
-                                loading="lazy">
-                        <?php else : ?>
-                            <span class="sponsor-tile__name"><?php echo esc_html( $name ); ?></span>
-                        <?php endif; ?>
-
-                        <?php if ( $url ) : ?>
-                            </a>
-                        <?php endif; ?>
-                    </div>
-                <?php endforeach; ?>
+        <?php foreach ( array_slice( $sponsor_tiers, 1 ) as $tier ) : ?>
+            <div class="sponsor-tier sponsor-tier--<?php echo esc_attr( $tier['slug'] ); ?>">
+                <h3 class="sponsor-tier__heading"><?php echo esc_html( $tier['name'] ); ?></h3>
+                <div class="sponsors-logo-grid">
+                    <?php foreach ( $tier['sponsors'] as $sponsor ) : ?>
+                        <div class="sponsor-tile">
+                            <?php echo $hog_sponsor_render( $sponsor ); ?>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
             </div>
-
-        <?php else : ?>
-
-            <p class="sponsors-coming-soon">Sponsor logos coming soon.</p>
-
-        <?php endif; ?>
+        <?php endforeach; ?>
     </div>
 </section>
 
@@ -111,7 +174,7 @@ $sponsors = hog_option_sponsors();
                     </svg>
                 </div>
                 <h3 class="partner-card__name">Stroud Fire Department</h3>
-                <p class="partner-card__role">Official Weigh-In Site Host &amp; Safety Partner</p>
+                <p class="partner-card__role">Safety Partner</p>
             </div>
 
             <div class="partner-card">

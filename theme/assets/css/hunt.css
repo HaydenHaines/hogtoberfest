@@ -615,11 +615,11 @@
 
 .hunt-rules__text {
     font-family: var(--font-body);
-    font-size: var(--text-base);
-    color: var(--clr-text-dark);
+    font-size: var(--text-lg);
+    color: var(--clr-cream);
     line-height: 1.7;
     margin: 0;
-    padding-top: 6px;
+    padding-top: 4px;
 }
 
 .hunt-rules__item--polygraph {
@@ -668,10 +668,78 @@
 
 .polygraph-callout__text {
     font-family: var(--font-body);
-    font-size: var(--text-base);
-    color: var(--clr-text-dark);
+    font-size: var(--text-lg);
+    color: var(--clr-cream);
     line-height: 1.7;
     margin: 0;
+}
+
+/* ── Registration Agreement callout ──────────────────────── */
+.rules-agreement {
+    max-width: 800px;
+    margin: 0 auto;
+    background: color-mix(in srgb, var(--clr-gold) 14%, transparent);
+    border: 2px solid var(--clr-gold);
+    border-left: 6px solid var(--clr-gold);
+    border-radius: var(--radius-md);
+    padding: var(--sp-6) var(--sp-8);
+    box-shadow: var(--glow-gold);
+}
+
+.rules-agreement__badge {
+    display: inline-block;
+    font-family: var(--font-ui);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--clr-brown-dark);
+    background: var(--clr-gold);
+    border-radius: 4px;
+    padding: 4px 10px;
+    margin-bottom: var(--sp-3);
+}
+
+.rules-agreement__text {
+    font-family: var(--font-body);
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--clr-cream);
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ── Rules CTA (full rulebook button) ────────────────────── */
+.hunt-rules__cta {
+    text-align: center;
+    margin-top: var(--sp-12);
+}
+
+.hunt-rules__cta-text {
+    font-family: var(--font-body);
+    font-size: var(--text-lg);
+    color: var(--clr-cream);
+    margin: 0 0 var(--sp-4);
+}
+
+.hunt-rules__cta-btn {
+    font-size: var(--text-base);
+    padding: var(--sp-4) var(--sp-8);
+}
+
+/* ── Divisions clarifying note ───────────────────────────── */
+.hunt-divisions__note {
+    text-align: center;
+    max-width: 720px;
+    margin: var(--sp-8) auto 0;
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--clr-cream-dark);
+    line-height: 1.6;
+}
+
+.hunt-divisions__note strong {
+    color: var(--clr-gold);
 }
 
 /* ==========================================================================

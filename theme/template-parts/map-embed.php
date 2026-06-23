@@ -30,8 +30,8 @@ $directions_url = hog_option( 'map_directions_url' );
         <div class="map-embed__address">
             <p class="map-embed__address-text">
                 <span class="map-embed__address-line">Weigh-In Station</span>
-                Across from the Stroud Fire Station<br>
-                316 W. 8th Ave, Stroud, OK 74079
+                Behind the Stroud Main Street (Route 66) Pavilion<br>
+                4th Avenue &amp; 2nd Street, Stroud, OK 74079
             </p>
             <?php if ( $directions_url ) : ?>
                 <a href="<?php echo esc_url( $directions_url ); ?>"

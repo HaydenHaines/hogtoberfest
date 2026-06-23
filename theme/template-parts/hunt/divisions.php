@@ -9,7 +9,7 @@
 	<div class="container">
 		<h2 class="section-title" id="divisions-heading">Hunt Divisions</h2>
 		<div class="gold-rule" aria-hidden="true"></div>
-		<p class="section-subtitle">Two divisions. One prize pool each. Choose your division at registration.</p>
+		<p class="section-subtitle">Two divisions, each with its own main prize pool. Choose your division when you register.</p>
 
 		<div class="hunt-divisions__grid">
 
@@ -36,5 +36,7 @@
 			</article>
 
 		</div>
+
+		<p class="hunt-divisions__note">One main prize pool per division. You select your division during registration. <strong>Side pots are awarded separately and are open to all teams regardless of division.</strong></p>
 	</div>
 </section>
