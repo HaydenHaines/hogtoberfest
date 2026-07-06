@@ -1,9 +1,41 @@
 <?php
-$sponsors = hog_option_sponsors();
+/**
+ * Homepage Sponsor Bar
+ *
+ * Renders every sponsor from the shared source of truth (inc/sponsors.php),
+ * so the homepage always matches the Sponsors page. The presenting sponsor
+ * (Sac and Fox Nation Casino) is featured above the rest at a larger size.
+ */
 
-if ( ! $sponsors || ! is_array( $sponsors ) ) {
+if ( ! function_exists( 'hog_sponsor_tiers' ) ) {
     return;
 }
+
+$tiers      = hog_sponsor_tiers();
+$presenting = hog_presenting_sponsor();
+
+// Flatten every non-presenting sponsor into a single row.
+$others = [];
+foreach ( array_slice( $tiers, 1 ) as $tier ) {
+    foreach ( $tier['sponsors'] as $sponsor ) {
+        $others[] = $sponsor;
+    }
+}
+
+if ( ! $presenting && ! $others ) {
+    return;
+}
+
+$bar_classes = [
+    'img'  => 'sponsor-bar__logo',
+    'name' => 'sponsor-bar__name',
+    'link' => 'sponsor-bar__link',
+];
+$featured_classes = [
+    'img'  => 'sponsor-bar__logo sponsor-bar__logo--featured',
+    'name' => 'sponsor-bar__name sponsor-bar__name--featured',
+    'link' => 'sponsor-bar__link',
+];
 ?>
 
 <aside class="sponsor-bar" aria-label="Event sponsors">
@@ -11,49 +43,21 @@ if ( ! $sponsors || ! is_array( $sponsors ) ) {
 
         <p class="sponsor-bar__label">Proudly Supported By</p>
 
-        <ul class="sponsor-bar__list">
-            <?php foreach ( $sponsors as $sponsor ) :
-                $name = ! empty( $sponsor['sponsor_name'] ) ? $sponsor['sponsor_name'] : '';
-                $logo = ! empty( $sponsor['sponsor_logo'] ) ? $sponsor['sponsor_logo'] : null;
-                $url  = ! empty( $sponsor['sponsor_url'] )  ? $sponsor['sponsor_url']  : '';
+        <?php if ( $presenting ) : ?>
+            <div class="sponsor-bar__featured">
+                <?php echo hog_sponsor_html( $presenting, $featured_classes ); ?>
+            </div>
+        <?php endif; ?>
 
-                if ( ! $logo ) continue;
-                ?>
-                <li class="sponsor-bar__item">
-                    <?php if ( $url ) : ?>
-                        <a href="<?php echo esc_url( $url ); ?>"
-                           class="sponsor-bar__link"
-                           target="_blank"
-                           rel="noopener noreferrer sponsored"
-                           aria-label="<?php echo esc_attr( $name ); ?> (opens in a new tab)">
-                            <img
-                                src="<?php echo esc_url( $logo['url'] ); ?>"
-                                alt=""
-                                class="sponsor-bar__logo"
-                                width="<?php echo esc_attr( $logo['width'] ?? 200 ); ?>"
-                                height="<?php echo esc_attr( $logo['height'] ?? 80 ); ?>"
-                                loading="lazy">
-                            <?php if ( $name ) : ?>
-                                <span class="sponsor-bar__name"><?php echo esc_html( $name ); ?></span>
-                            <?php endif; ?>
-                        </a>
-                    <?php else : ?>
-                        <div class="sponsor-bar__item-inner">
-                            <img
-                                src="<?php echo esc_url( $logo['url'] ); ?>"
-                                alt="<?php echo esc_attr( $logo['alt'] ?: $name ); ?>"
-                                class="sponsor-bar__logo"
-                                width="<?php echo esc_attr( $logo['width'] ?? 200 ); ?>"
-                                height="<?php echo esc_attr( $logo['height'] ?? 80 ); ?>"
-                                loading="lazy">
-                            <?php if ( $name ) : ?>
-                                <span class="sponsor-bar__name"><?php echo esc_html( $name ); ?></span>
-                            <?php endif; ?>
-                        </div>
-                    <?php endif; ?>
-                </li>
-            <?php endforeach; ?>
-        </ul>
+        <?php if ( $others ) : ?>
+            <ul class="sponsor-bar__list">
+                <?php foreach ( $others as $sponsor ) : ?>
+                    <li class="sponsor-bar__item">
+                        <?php echo hog_sponsor_html( $sponsor, $bar_classes ); ?>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        <?php endif; ?>
 
     </div>
 </aside>

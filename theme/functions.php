@@ -2,6 +2,7 @@
 require_once get_template_directory() . '/inc/theme-setup.php';
 require_once get_template_directory() . '/inc/enqueue.php';
 require_once get_template_directory() . '/inc/acf-options.php';
+require_once get_template_directory() . '/inc/sponsors.php';
 
 /** Returns the registration URL from options, or '#' if not yet set. */
 function hogtoberfest_registration_url(): string {

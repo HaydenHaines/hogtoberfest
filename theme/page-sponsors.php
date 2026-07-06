@@ -13,80 +13,10 @@
 
 get_header();
 
-$sponsor_tiers = [
-    [
-        'name'     => 'Presenting Sponsor',
-        'slug'     => 'presenting',
-        'sponsors' => [
-            [ 'name' => 'Sac and Fox Nation Casino', 'logo' => 'sac-and-fox-casino', 'url' => '' ],
-        ],
-    ],
-    [
-        'name'     => 'King Boar Sponsors',
-        'slug'     => 'king-boar',
-        'sponsors' => [
-            [ 'name' => 'Tatanka Ranch', 'logo' => 'tatanka-ranch', 'url' => '' ],
-            [ 'name' => 'Five Star BBQ', 'logo' => 'five-star-bbq', 'url' => '' ],
-        ],
-    ],
-    [
-        'name'     => 'Big Boar Sponsors',
-        'slug'     => 'big-boar',
-        'sponsors' => [
-            [ 'name' => 'Genesis',     'logo' => 'genesis',     'url' => '' ],
-            [ 'name' => 'Jim Hodgens', 'logo' => 'jim-hodgens', 'url' => '' ],
-        ],
-    ],
-    [
-        'name'     => 'Trophy Hog Sponsors',
-        'slug'     => 'trophy-hog',
-        'sponsors' => [
-            [ 'name' => 'Five Tool Management', 'logo' => 'five-tool-management', 'url' => '' ],
-            [ 'name' => "D's Specialty House",  'logo' => 'ds-specialty-house',    'url' => '' ],
-        ],
-    ],
-];
-
-/**
- * Returns a sponsor's logo <img> if a matching file exists in
- * assets/images/sponsors/, otherwise the styled sponsor name.
- */
-$hog_sponsor_logo = static function ( array $sponsor ): string {
-    $slug = $sponsor['logo'] ?? '';
-    $name = $sponsor['name'] ?? '';
-    $base = '/assets/images/sponsors/' . $slug;
-    $uri  = '';
-    foreach ( [ 'svg', 'png', 'webp', 'jpg', 'jpeg' ] as $ext ) {
-        if ( $slug && file_exists( get_template_directory() . $base . '.' . $ext ) ) {
-            $uri = get_template_directory_uri() . $base . '.' . $ext;
-            break;
-        }
-    }
-    if ( $uri ) {
-        return sprintf(
-            '<img src="%s" alt="%s" class="sponsor-tile__img" loading="lazy">',
-            esc_url( $uri ),
-            esc_attr( $name )
-        );
-    }
-    return sprintf( '<span class="sponsor-tile__name">%s</span>', esc_html( $name ) );
-};
-
-/**
- * Renders a sponsor as a linked logo/name (or unlinked when no url).
- */
-$hog_sponsor_render = static function ( array $sponsor ) use ( $hog_sponsor_logo ): string {
-    $inner = $hog_sponsor_logo( $sponsor );
-    if ( ! empty( $sponsor['url'] ) ) {
-        return sprintf(
-            '<a href="%s" class="sponsor-tile__link" target="_blank" rel="noopener noreferrer sponsored" aria-label="%s (opens in a new tab)">%s</a>',
-            esc_url( $sponsor['url'] ),
-            esc_attr( $sponsor['name'] ?? '' ),
-            $inner
-        );
-    }
-    return $inner;
-};
+// Sponsor data + renderer live in inc/sponsors.php (shared with the homepage
+// sponsor bar so the two never drift). hog_sponsor_html() defaults to the
+// sponsor-tile__* classes this page styles.
+$sponsor_tiers = hog_sponsor_tiers();
 ?>
 
 <header class="page-header">
@@ -128,7 +58,7 @@ $hog_sponsor_render = static function ( array $sponsor ) use ( $hog_sponsor_logo
             <p class="presenting-banner__eyebrow">Hogtoberfest</p>
             <p class="presenting-banner__label" id="presenting-heading">Presented By</p>
             <div class="presenting-banner__sponsor">
-                <?php echo $hog_sponsor_render( $presenting ); ?>
+                <?php echo hog_sponsor_html( $presenting ); ?>
             </div>
             <p class="presenting-banner__tier">Presenting Sponsor</p>
         </div>
@@ -147,7 +77,7 @@ $hog_sponsor_render = static function ( array $sponsor ) use ( $hog_sponsor_logo
                 <div class="sponsors-logo-grid">
                     <?php foreach ( $tier['sponsors'] as $sponsor ) : ?>
                         <div class="sponsor-tile">
-                            <?php echo $hog_sponsor_render( $sponsor ); ?>
+                            <?php echo hog_sponsor_html( $sponsor ); ?>
                         </div>
                     <?php endforeach; ?>
                 </div>

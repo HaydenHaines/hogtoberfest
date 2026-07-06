@@ -305,6 +305,24 @@ a:hover { color: var(--clr-gold); }
     margin-bottom: var(--sp-6);
 }
 
+/* Presenting sponsor (Sac and Fox) — featured above the rest, much larger. */
+.sponsor-bar__featured {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--sp-8);
+}
+
+.sponsor-bar__logo--featured {
+    max-height: 120px;
+    max-width: 340px;
+}
+
+.sponsor-bar__name--featured {
+    font-size: var(--text-lg);
+    color: var(--clr-green-dark);
+}
+
 .sponsor-bar__list {
     display: flex;
     align-items: center;
@@ -334,16 +352,10 @@ a:hover { color: var(--clr-gold); }
 }
 
 .sponsor-bar__logo {
-    max-height: 48px;
+    max-height: 72px;
     width: auto;
-    max-width: 180px;
+    max-width: 220px;
     object-fit: contain;
-    filter: grayscale(20%);
-    transition: filter var(--ease-base);
-}
-
-.sponsor-bar__link:hover .sponsor-bar__logo {
-    filter: none;
 }
 
 .sponsor-bar__link:focus-visible {
@@ -353,7 +365,7 @@ a:hover { color: var(--clr-gold); }
 
 .sponsor-bar__name {
     font-family: var(--font-ui);
-    font-size: var(--text-xs);
+    font-size: var(--text-sm);
     font-weight: 600;
     letter-spacing: 0.06em;
     color: var(--clr-text-muted);
@@ -366,7 +378,13 @@ a:hover { color: var(--clr-gold); }
     }
 
     .sponsor-bar__logo {
-        max-height: 64px;
+        max-height: 96px;
+        max-width: 260px;
+    }
+
+    .sponsor-bar__logo--featured {
+        max-height: 160px;
+        max-width: 440px;
     }
 }
 

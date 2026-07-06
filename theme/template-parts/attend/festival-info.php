@@ -14,7 +14,7 @@
         <div class="page-content text-cream">
             <h3>When &amp; Where</h3>
             <p>
-                Saturday, September 12, 2026 &middot; 10:00 AM &ndash; 8:00 PM<br>
+                Saturday, September 12, 2026 &middot; 12:00 PM &ndash; 10:00 PM<br>
                 Main Street, Stroud, Oklahoma 74079 &middot; Historic Route 66
             </p>
 

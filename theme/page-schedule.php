@@ -84,7 +84,7 @@ $end_date   = hog_option( 'event_end_date',   'Saturday, September 12, 2026' );
                     </div>
 
                     <div class="schedule-item">
-                        <dt class="schedule-item__time">11:00 PM</dt>
+                        <dt class="schedule-item__time">10:00 PM</dt>
                         <dd class="schedule-item__label">Festival Closes</dd>
                         <dd class="schedule-item__note">Live music wraps up; see you next year</dd>
                     </div>
