@@ -34,8 +34,9 @@ function hog_sponsor_tiers(): array {
             'name'     => 'Big Boar Sponsors',
             'slug'     => 'big-boar',
             'sponsors' => [
-                [ 'name' => 'Genesis',     'logo' => 'genesis',     'url' => '' ],
-                [ 'name' => 'Jim Hodgens', 'logo' => 'jim-hodgens', 'url' => '' ],
+                [ 'name' => 'Genesis',                  'logo' => 'genesis',                  'url' => '' ],
+                [ 'name' => 'Jim Hodgens',              'logo' => 'jim-hodgens',              'url' => '' ],
+                [ 'name' => 'Thermal Sales of Oklahoma', 'logo' => 'thermal-sales-of-oklahoma', 'url' => 'https://thermalsalesofok.com/' ],
             ],
         ],
         [
