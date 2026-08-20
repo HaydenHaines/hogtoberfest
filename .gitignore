@@ -15,3 +15,6 @@
 # Local env overrides
 .env
 .env.local
+
+# Packaged theme zip (rebuilt from tracked theme/ source)
+hogtoberfest-theme.zip
